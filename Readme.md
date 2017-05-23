@@ -1,7 +1,7 @@
 # Личный проект «Пинк» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Аникейчик Дмитрий](https://up.htmlacademy.ru/adaptive/11/user/4118).
-* Наставник: `Неизвестно`.
+* Наставник: `Без наставника`.
 
 ---
 
