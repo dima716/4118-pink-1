@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Пинк</title>
+</head>
+<body>
+  <header class="page-header">
+    <h1 class="page-header__title">Пинк - простой, веселый и творческий способ делиться фотографиями с друзьями и
+                                   близкими.
+    </h1>
+    <div class="page-header__logo">
+      <img src="http://placehold.it/75x22"
+           width="75"
+           height="22"
+           alt="Пинк">
+    </div>
+    <nav class="main-nav">
+      <span class="main-nav__toggler">
+        <span></span>
+      </span>
+      <div class="main-nav__wrapper">
+        <ul class="main-nav__list">
+          <li class="main-nav__item">
+            <a href="#">главная</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="#">фотографии</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="#">конкурс</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="#">html academy</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <section class="intro">
+    <div class="intro__img">
+      <img src="http://placehold.it/320x462"
+           width="320"
+           height="462"
+           alt="Скачать приложение">
+    </div>
+    <h2 class="intro__title">Конкурс на самое безабашенное путешествие с Пинк</h2>
+    <p class="intro__text">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную
+                           карту!
+    </p>
+  </section>
+  <section class="form">
+    <form action="https://echo.htmlacademy.ru/">
+      <div class="form__person-info">
+        <div class="form__row">
+          <label class="label-text"
+                 for="last-name">фамилия:
+          </label>
+          <input class="input-text"
+                 id="last-name"
+                 type="text"
+                 placeholder="Укажите фамилию &#42;"
+                 name="last-name">
+        </div>
+        <div class="form__row">
+          <label class="label-text"
+                 for="name">имя
+          </label>
+          <input class="input-text"
+                 id="name"
+                 type="text"
+                 placeholder="Введите ваше имя &#42;"
+                 name="name">
+        </div>
+        <div class="form__row">
+          <label class="label-text"
+                 for="middle-name">отчество
+          </label>
+          <input class="input-text"
+                 id="middle-name"
+                 type="text"
+                 placeholder="Ну и отчество тоже"
+                 name="middle-name">
+        </div>
+      </div>
+      <div class="form__person-achievements">
+        <b class="form__title">ваши безбашенные достижения в путешествии</b>
+        <div class="form__row">
+          <input class="label-check"
+                 id="selfie-with-shark"
+                 type="checkbox"
+                 name="person-achievements"
+                 value="selfie-with-shark">
+          <label class="input-check"
+                 for="selfie-with-shark">Сделал селфи с акулой
+          </label>
+        </div>
+        <div class="form__row">
+          <input class="label-check"
+                 id="burnt-on-beach"
+                 type="checkbox"
+                 name="person-achievements"
+                 value="burnt-on-beach">
+          <label class="input-check"
+                 for="burnt-on-beach">Обгорел на пляже
+          </label>
+        </div>
+        <div class="form__row">
+          <input class="label-check"
+                 id="saw-chuck-norris"
+                 type="checkbox"
+                 name="person-achievements"
+                 value="saw-chuck-norris">
+          <label class="input-check"
+                 for="saw-chuck-norris">Видел Чака Норриса
+          </label>
+        </div>
+        <div class="form__row">
+          <input class="label-check"
+                 id="bought-souvenirs"
+                 type="checkbox"
+                 name="person-achievements"
+                 value="bought-souvenirs">
+          <label class="input-check"
+                 for="bought-souvenirs">Накупил сувениров
+          </label>
+        </div>
+        <div class="form__row">
+          <input class="label-check"
+                 id="kept-tower"
+                 type="checkbox"
+                 name="person-achievements"
+                 value="kept-tower">
+          <label class="input-check"
+                 for="kept-tower">Удержал башню
+          </label>
+        </div>
+        <div class="form__row">
+          <input class="label-check"
+                 id="destroyed-hotel"
+                 type="checkbox"
+                 name="person-achievements"
+                 value="destroyed-hotel">
+          <label class="input-check"
+                 for="destroyed-hotel">Разгромил отель
+          </label>
+        </div>
+      </div>
+      <div class="form__person-contacts">
+        <div class="form__row">
+          <label class="label-text"
+                 for="last-name">номер телефона:
+          </label>
+          <input class="input-text"
+                 id="phone"
+                 type="phone"
+                 placeholder="Номер, пожалуйста"
+                 name="phone">
+        </div>
+        <div class="form__row">
+          <label class="label-text"
+                 for="name">адрес почты
+          </label>
+          <input class="input-text"
+                 id="email"
+                 type="email"
+                 placeholder="Введите почту &#42;"
+                 name="email">
+        </div>
+      </div>
+      <div class="form__person-travel-app">
+        <b class="form__title">с каким приложением путешествовали?</b>
+        <div class="form__row">
+          <input class="label-check"
+                 id="pink-ios"
+                 type="radio"
+                 name="person-travel-app"
+                 value="pink-ios">
+          <label class="input-check"
+                 for="pink-ios">Pink для iOS
+          </label>
+        </div>
+        <div class="form__row">
+          <input class="label-check"
+                 id="pink-android"
+                 type="radio"
+                 name="person-travel-app"
+                 value="pink-android">
+          <label class="input-check"
+                 for="pink-android">Pink на Android
+          </label>
+        </div>
+        <div class="form__row">
+          <input class="label-check"
+                 id="pink-windows-phone"
+                 type="radio"
+                 name="person-travel-app"
+                 value="pink-windows-phone">
+          <label class="input-check"
+                 for="pink-windows-phone">Windows Phone
+          </label>
+        </div>
+      </div>
+      <div class="form__person-emotions">
+        <b class="form__title">опишите свои эмоции</b>
+        <textarea placeholder="Можное прям в красках, не стесняясь в выражениях"></textarea>
+      </div>
+      <button class="form__submit"
+              type="submit">отправить форму</button>
+      <div class="form__sign">
+        <span>&#42;</span>
+        - обязательные поля
+      </div>
+    </form>
+  </section>
+  <footer class="page-footer">
+    <div class="page-footer__logo">
+      <img src="http://placehold.it/147x40"
+           width="147"
+           height="40"
+           alt="Пинк">
+    </div>
+    <div class="social-links page-footer__social-links">
+      <a class="social-link social-link--twitter"
+         href="#">Мы в twitter
+      </a>
+      <a class="social-link social-link--facebook"
+         href="#">Мы в facebook
+      </a>
+      <a class="social-link social-link--youtube"
+         href="#">Мы в youtbue
+      </a>
+    </div>
+    <div class="page-footer__developed-by">
+      Разработано
+      <a class="html-academy-logo"
+         href="https://htmlacademy.ru/">
+        <img src="http://placehold.it/27x34"
+             alt="HTML Academy">
+      </a>
+    </div>
+  </footer>
+</body>
+</html>

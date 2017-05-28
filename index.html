@@ -1,12 +1,165 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Пинк</title>
-  </head>
-  <body>
-
-    <p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">Продвинутый HTML и CSS</a>».</p>
-
-  </body>
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Пинк</title>
+</head>
+<body>
+  <header class="page-header">
+    <h1 class="page-header__title">Пинк - простой, веселый и творческий способ делиться фотографиями с друзьями и
+                                   близкими.
+    </h1>
+    <div class="page-header__logo">
+      <img src="http://placehold.it/75x22"
+           width="75"
+           height="22"
+           alt="Пинк">
+    </div>
+    <nav class="main-nav">
+      <span class="main-nav__toggler">
+        <span></span>
+      </span>
+      <div class="main-nav__wrapper">
+        <ul class="main-nav__list">
+          <li class="main-nav__item">
+            <a href="#">главная</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="#">фотографии</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="#">конкурс</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="#">html academy</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <section class="intro">
+    <div class="intro__img">
+      <img src="http://placehold.it/320x462"
+           width="320"
+           height="462"
+           alt="Скачать приложение">
+    </div>
+    <div class="download intro__download">
+      <a class="download__button"
+         href="#">Скачать приложение
+      </a>
+      <div class="download__links">
+        <span class="download__link download__link--apple">apple</span>
+        <span class="download__link download__link--android">android</span>
+        <span class="download__link download__link--windows-phone">windows phone</span>
+      </div>
+      <p class="download__description">
+        Доступно для iPhone, Ipad, Android,
+        <br>
+        Windows Phone, OS X, Windows 8
+      </p>
+    </div>
+  </section>
+  <section class="info">
+    <div class="info__offer">
+      <p>Устали от серости мегаполиса?</p>
+      <p>Нам есть, что вам предложить!</p>
+    </div>
+    <div class="info__advantages">
+      <div class="info__advantage">
+        <b>Поднимает настроение</b>
+        <p>Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!
+        </p>
+      </div>
+      <div class="info__advantage">
+        <b>Меняет мир вокруг</b>
+        <p>Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект
+        </p>
+      </div>
+      <div class="info__advantage">
+        <b>Заводит новых друзей</b>
+        <p>Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых
+        </p>
+      </div>
+    </div>
+    <div class="info__image">
+      <img src="http://placehold.it/157x320"
+           width="157"
+           height="320"
+           alt="Всем привет">
+    </div>
+  </section>
+  <section class="reviews">
+    <div class="reviews__list slider">
+      <div class="reviews__inner slider__inner">
+        <blockquote class="reviews__item slider__item">
+          «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я
+          познакомился со своей будущей женой в комментариях к выложенной фотографии!»
+        </blockquote>
+      </div>
+      <div class="reviews__pagination slider__pagination">
+        <span class="reviews__pagination-item slider__pagination-item reviews__pagination-item--active"></span>
+        <span class="reviews__pagination-item slider__pagination-item"></span>
+        <span class="reviews__pagination-item slider__pagination-item"></span>
+      </div>
+    </div>
+  </section>
+  <section class="prices">
+    <div class="prices__list slider">
+      <div class="prices__inner slider__inner">
+        <table class="prices__item slider__item">
+          <thead>
+            <tr>
+              <th class="prices__item-header">
+                <span class="prices__item-name">стандарт</span>
+                <span class="prices__item-number">3,99 USD</span>
+                <span class="prices__item-badge">хит</span>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="prices__item-option prices__item-option--available">розовый фильтр</td>
+              <td class="prices__item-option prices__item-option--available">розовый фильтр</td>
+              <td class="prices__item-option prices__item-option">розовый фильтр</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="prices__pagination slider__pagination">
+        <span class="prices__pagination-item slider__pagination-item"></span>
+        <span class="prices__pagination-item slider__pagination-item prices__pagination-item--active"></span>
+        <span class="prices__pagination-item slider__pagination-item"></span>
+      </div>
+    </div>
+  </section>
+  <footer class="page-footer">
+    <div class="contacts">
+      <div class="contacts__info">
+        <p class="contacts__questions">Остались вопросы? Свяжитесь с нами!</p>
+        <ul class="contacts__info-list">
+          <li class="contacts__info-item">
+            <b>Звоните:</b>
+            <a href="tel:+78125556666">+7(812)555-66-66</a>
+          </li>
+          <li class="contacts__info-item">
+            <b>Пишите:</b>
+            <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+          </li>
+          <li class="contacts__info-item">
+            <b>Приезжайте в гости:</b>
+            <a>ул. Большая Конюшенная, 19/8
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="contacts__map">
+        <img src="http://placehold.it/320x200"
+             width="320"
+             height="200"
+             alt="Где мы находимся на карте">
+      </div>
+    </div>
+  </footer>
+</body>
 </html>
