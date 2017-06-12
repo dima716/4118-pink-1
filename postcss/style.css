@@ -11,8 +11,10 @@
 @import 'blocks/container.css';
 @import 'blocks/page-header.css';
 @import 'blocks/main-nav.css';
+@import 'blocks/slider.css';
 
 /* Index */
 @import 'blocks/intro.css';
 @import 'blocks/download.css';
 @import 'blocks/info.css';
+@import 'blocks/reviews.css';
