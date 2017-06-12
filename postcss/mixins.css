@@ -1,0 +1,38 @@
+@define-mixin only-mobile {
+  @media (max-width: $only-mobile-widths) {
+    @mixin-content;
+  }
+}
+
+@define-mixin tablet {
+  @media (min-width: $tablet-widths) {
+    @mixin-content;
+  }
+}
+
+@define-mixin desktop {
+  @media (min-width: $desktop-widths) {
+    @mixin-content;
+  }
+}
+
+@define-mixin container {
+  width: $body-min-width;
+  padding: 0 20px;
+  margin: 0 auto;
+
+  @mixin tablet {
+    width: $tablet-widths;
+  }
+
+  @mixin desktop {
+    width: $desktop-widths;
+    padding: 0 120px;
+  }
+}
+
+@define-mixin reset-ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
