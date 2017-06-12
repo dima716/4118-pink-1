@@ -7,4 +7,9 @@
     background-position: center center;
     background-size: cover;
   }
+
+  &__download {
+    padding-top: 28px;
+    padding-bottom: 32px;
+  }
 }
