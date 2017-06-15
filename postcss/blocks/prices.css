@@ -1,0 +1,126 @@
+.prices {
+  background-color: #f2f2f2;
+  position: relative;
+  padding-top: 63px;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    display: block;
+    height: 100%;
+    transform-origin: left top;
+    transform: skewY(-5deg);
+    background-color: inherit;
+    width: 100%;
+    z-index: -1;
+  }
+
+  &__item {
+    & > table {
+      width: 100%;
+    }
+  }
+
+  &__item-header {
+    text-align: center;
+    position: relative;
+    background-color: #283645;
+    padding-top: 21px;
+    padding-bottom: 17px;
+    overflow: hidden;
+  }
+
+  &__item-name {
+    display: block;
+    font-size: 18px;
+    line-height: 30px;
+    color: #fff;
+    text-transform: uppercase;
+  }
+
+  &__item-number {
+    display: block;
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: lighter;
+    color: #fff;
+  }
+
+  &__item-badge {
+    position: absolute;
+    top: 15px;
+    left: -48px;
+    color: #fff;
+    background-color: #d22856;
+    transform: rotate(-45deg);
+    padding: 7px;
+    width: 150px;
+    text-transform: uppercase;
+  }
+
+  &__item-option {
+    position: relative;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 22px;
+    font-size: 14px;
+    line-height: 30px;
+    text-transform: uppercase;
+    background-color: #fff;
+
+    &:before {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 27px;
+      height: 27px;
+      background-image: url(../img/icon-no.svg);
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      right: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__item-option--available:before {
+    width: 32px;
+    height: 23px;
+    background-image: url(../img/icon-yes.svg);
+  }
+
+  &__pagination {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 47px;
+    padding-top: 47px;
+  }
+
+  &__pagination-item {
+    width: 12px;
+    height: 12px;
+    margin-right: 13px;
+    cursor: pointer;
+    border: 3px solid #f2f2f2;
+    border-radius: 50%;
+    background-color: #bec2c7;
+
+    &:not(&--active):hover {
+      background-color: #7e868f;
+    }
+
+    &:not(&--active):active {
+      background-color: #e9ebec;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__pagination-item--active {
+    border-color: #283645;
+    background-color: #fff;
+  }
+}

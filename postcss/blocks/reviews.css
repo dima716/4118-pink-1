@@ -1,5 +1,6 @@
 .reviews {
   padding-top: 44px;
+  padding-bottom: 70px;
 
   &__list {
     width: 280px;
@@ -24,6 +25,7 @@
   }
 
   &__inner {
+    display: flex;
     margin-bottom: 32px;
   }
 

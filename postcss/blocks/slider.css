@@ -1,12 +1,11 @@
 .slider {
   overflow: hidden;
 
-  &__inner {
-    transition: transform .25s;
-    display: flex;
+  &__item {
+    display: none;
   }
 
-  &__item {
-    flex: 1 0 280px;
+  &__item--active {
+    display: block;
   }
 }

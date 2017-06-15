@@ -13,7 +13,6 @@
 
   function Slider(options) {
     this.activePaginatorItemClass = options.activePaginatorItemClass;
-    this.activeSliderItemIndex = options.activeSliderItemIndex || 0;
     this.slider = global.document.querySelector(options.selector);
   }
 
@@ -25,6 +24,7 @@
         sliderPaginationItems = sliderPagination.querySelectorAll('.slider__pagination-item'),
         transformValue = 0;
 
+
     function clearSliderPaginationItems() {
       [].forEach.call(sliderPaginationItems, (function (item) {
         item.classList.remove(this.activePaginatorItemClass);
@@ -35,23 +35,25 @@
       item.setAttribute('data-index', index);
     });
 
-    sliderInner.style.width = slideWidth * sliderItems.length + 'px';
+    var currentIndex = global.parseInt(sliderPagination.querySelector('.' + this.activePaginatorItemClass).getAttribute('data-index'));
 
     sliderPagination.addEventListener('click', (function (event) {
-      let target = event.target;
+      var target = event.target;
 
       while(target != sliderPagination) {
         if (target.tagName == 'SPAN') {
           var index = global.parseInt(target.getAttribute('data-index')),
-              moveDistance = Math.abs(index - this.activeSliderItemIndex) * slideWidth;
+              moveDistance = Math.abs(index - currentIndex) * slideWidth;
+
+          if (index == currentIndex) return;
 
           clearSliderPaginationItems.call(this);
           target.classList.add(this.activePaginatorItemClass);
+          sliderItems[index].classList.add('slider__item--active');
 
-          transformValue = index < this.activeSliderItemIndex ? transformValue + moveDistance : transformValue - moveDistance;
+          sliderItems[currentIndex].classList.remove('slider__item--active');
 
-          sliderInner.style.transform = 'translateX(' + transformValue + 'px)';
-          this.activeSliderItemIndex = index;
+          currentIndex = index;
           return;
         }
 
@@ -66,5 +68,11 @@
     activePaginatorItemClass: 'reviews__pagination-item--active'
   });
 
+  var pricesSlider = new Slider({
+    selector: '.prices__list',
+    activePaginatorItemClass: 'prices__pagination-item--active'
+  });
+
   reviewSlider.init();
+  pricesSlider.init();
 })(window);

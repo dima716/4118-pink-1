@@ -20,24 +20,24 @@
   &__advantages {
     background-color: #f2f2f2;
     margin-top: 32px;
-    padding-top: 55px;
+    padding-top: 49px;
     position: relative;
 
     &:before {
       content: '';
       position: absolute;
-      top: -32px;
+      top: 0px;
       display: block;
-      height: 32px;
-      transform-origin: top right;
+      height: 100%;
+      transform-origin: left top;
       transform: skewY(-5deg);
       background-color: inherit;
       width: 100%;
+      z-index: -1;
     }
   }
 
   &__advantage {
-
     & > b {
       display: block;
       font-size: 18px;
