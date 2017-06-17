@@ -1,15 +1,21 @@
 .intro {
-  &__img {
-    font-size: 0;
-    padding-top: 175px;
+    display: flex;
+    min-height: 461px;
+    align-items: flex-end;
     background-image: url(../img/bg-back-mobile@1x.jpg);
     background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
+    background-position: top center;
+    background-color: #1d2631;
+
+  &__img {
+    font-size: 0;
   }
 
-  &__download {
-    padding-top: 28px;
-    padding-bottom: 32px;
+  &__title {
+    color: #fff;
+    align-self: center;
+    text-align: center;
+    margin: 0;
+    font-weight: lighter;
   }
 }

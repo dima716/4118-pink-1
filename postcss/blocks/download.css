@@ -1,5 +1,7 @@
 .download {
   background-color: #1d2631;
+  padding-top: 28px;
+  padding-bottom: 32px;
 
   &__links {
     display: flex;

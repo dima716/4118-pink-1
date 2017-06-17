@@ -1,0 +1,7 @@
+.photo-page {
+  &__intro {
+    min-height: 237px;
+    justify-content: center;
+    align-items: center;
+  }
+}

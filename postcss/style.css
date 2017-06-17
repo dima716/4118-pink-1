@@ -20,3 +20,7 @@
 @import 'blocks/reviews.css';
 @import 'blocks/prices.css';
 @import 'blocks/contacts.css';
+
+/* Photo */
+@import 'blocks/photo-page.css';
+@import 'blocks/photos.css';
