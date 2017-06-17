@@ -1,0 +1,128 @@
+.upload {
+  &__text {
+    padding-top: 42px;
+    padding-bottom: 42px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 30px;
+  }
+
+  &__tool {
+    padding-top: 20px;
+    background-color: #f2f2f2;
+    border-bottom: 1px solid #dddfe0;
+  }
+
+  &__tool-btn {
+    width: 100%;
+    cursor: pointer;
+    outline: none;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    display: block;
+    text-decoration: none;
+    background-color: #f2f2f2;
+    border: 3px solid;
+    border-radius: 25px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: bold;
+    transition: all .25s;
+
+    &:first-child {
+      margin-bottom: 12px;
+    }
+
+    &--post {
+      color: #d22856;
+      border-color: #d22856;
+
+      &:hover {
+        background-color: #d22856;
+        color: #fff;
+      }
+
+      &:active {
+        color: color(#fff a(30%));;
+      }
+    }
+
+    &--canceled {
+      color: #e3e4e4;
+      border-color: #e3e4e4;
+
+      &:hover {
+        color: #c4c6c8;
+        border-color: #b5b9be;
+      }
+
+      &:active {
+        color: #cdd0d3;
+        background-color: #b5b9be;
+      }
+    }
+  }
+
+  &__tool-img {
+    font-size: 0;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  &__tool-range {
+    position: relative;
+    height: 2px;
+    margin: 0 20px;
+    background-color: #283645;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & > span {
+      position: absolute;
+      cursor: pointer;
+      right: 55px;
+      width: 14px;
+      height: 14px;
+      border: 2px solid #d22856;
+      border-radius: 50%;
+      background-color: #f2f2f2;
+    }
+  }
+
+  &__tool-range--active > span {
+    background-color: #d22856;
+  }
+
+  &__tool-settings {
+    padding-bottom: 34px;
+  }
+
+  &__tool-actions {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: #f2f2f2;
+  }
+
+  &__tool-instruments {
+    display: flex;
+    margin-bottom: 27px;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  &__tool-instrument {
+    cursor: pointer;
+    fill: #b5b9be;
+
+    &:hover {
+      fill: #8d949b;
+    }
+  }
+
+  &__tool-instrument--active,
+  &__tool-instrument--active:hover {
+    fill: #d22856;
+  }
+}
