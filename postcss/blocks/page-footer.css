@@ -1,0 +1,24 @@
+.page-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  min-height: 285px;
+
+  &__logo {
+    width: 147px;
+    height: 40px;
+  }
+
+  &__logo:hover > svg > g > path {
+    fill: #d22856;
+  }
+
+  &__logo:active {
+    opacity: 0.3;
+
+    & > svg > g > path {
+      fill: initial;
+    }
+  }
+}
