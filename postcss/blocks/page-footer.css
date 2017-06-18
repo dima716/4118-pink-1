@@ -21,4 +21,28 @@
       fill: initial;
     }
   }
+
+  &__developed-by {
+    display: flex;
+    align-items: center;
+  }
+
+  &__developed-by-logo {
+    margin-left: 15px;
+    font-size: 0;
+
+    & > svg > path {
+      fill: #d22856
+    }
+  }
+
+  &__developed-by-logo:hover {
+    & > svg > path {
+      fill: #283645;
+    }
+  }
+
+  &__developed-by-logo:active {
+    opacity: 0.3;
+  }
 }
