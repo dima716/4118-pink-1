@@ -15,6 +15,7 @@
 
 /* Index */
 @import 'blocks/intro.css';
+@import 'blocks/index-page.css';
 @import 'blocks/download.css';
 @import 'blocks/info.css';
 @import 'blocks/reviews.css';
@@ -22,9 +23,18 @@
 @import 'blocks/contacts.css';
 
 /* Photo */
-@import 'blocks/photo-page.css';
 @import 'blocks/photos.css';
 @import 'blocks/upload.css';
 @import 'blocks/page-footer.css';
 @import 'blocks/social-links.css';
 @import 'blocks/social-link.css';
+
+/* Form */
+@import 'blocks/form-page.css';
+@import 'blocks/form.css';
+@import 'blocks/label-text.css';
+@import 'blocks/input-text.css';
+@import 'blocks/label-check.css';
+@import 'blocks/input-check.css';
+@import 'blocks/label-radio.css';
+@import 'blocks/input-radio.css';

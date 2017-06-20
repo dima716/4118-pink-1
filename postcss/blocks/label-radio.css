@@ -1,0 +1,24 @@
+.label-radio {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  &:hover:before {
+    box-shadow: 0px 0px 0px 2px #283645;
+  }
+
+  &:active:before {
+    box-shadow: 0px 0px 0px 2px #d22856;
+  }
+
+  &:before {
+    content: '';
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 30px;
+    border: 12px solid #fff;
+    background-color: #fff;
+    box-shadow: 0px 0px 0px 2px #e5e5e5;
+  }
+}

@@ -1,0 +1,22 @@
+.label-check {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  &:hover:before {
+    border-color: #283645;
+  }
+
+  &:active:before {
+    border-color: #d22856;
+  }
+
+  &:before {
+    content: '';
+    width: 40px;
+    height: 40px;
+    margin-right: 30px;
+    border: 2px solid #e5e5e5;
+    background-color: #fff;
+  }
+}

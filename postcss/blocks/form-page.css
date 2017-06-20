@@ -1,0 +1,5 @@
+.form-page {
+  &__title {
+    margin-top: 35px;
+  }
+}
