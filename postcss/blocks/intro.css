@@ -1,15 +1,24 @@
 .intro {
-    display: flex;
-    min-height: 237px;
-    justify-content: center;
-    align-items: center;
-    background-image: url(../img/bg-back-mobile@1x.jpg);
-    background-repeat: no-repeat;
-    background-position: top center;
-    background-color: #1d2631;
+  display: flex;
+  min-height: 237px;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../img/bg-back-mobile@1x.jpg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-color: #1d2631;
+
+  @mixin tablet {
+    background-size: cover;
+  }
 
   &__img {
     font-size: 0;
+
+    @mixin tablet {
+      order: 1;
+      align-self: flex-end;
+    }
   }
 
   &__title {

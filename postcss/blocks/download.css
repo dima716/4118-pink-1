@@ -3,6 +3,30 @@
   padding-top: 28px;
   padding-bottom: 32px;
 
+  @mixin tablet {
+    background-color: transparent;
+    order: 0;
+  }
+
+  &__container {
+    @mixin tablet {
+      width: 300px;
+    }
+  }
+
+  &__text {
+    display: none;
+    color: #fff;
+    font-size: 40px;
+    font-weight: lighter;
+    text-align: center;
+    margin-bottom: 35px;
+
+    @mixin tablet {
+      display: block;
+    }
+  }
+
   &__links {
     display: flex;
     justify-content: space-around;
