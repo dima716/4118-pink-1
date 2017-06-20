@@ -1,6 +1,13 @@
 .info {
   text-align: center;
 
+  &__container {
+    @mixin tablet {
+      display: flex;
+      justify-content: space-around;
+    }
+  }
+
   &__offer {
     padding-top: 43px;
     padding-bottom: 32px;
@@ -35,7 +42,6 @@
         margin-bottom: 0;
       }
     }
-
   }
 
   &__advantages {
@@ -43,6 +49,10 @@
     margin-top: 32px;
     padding-top: 49px;
     position: relative;
+
+    @mixin tablet {
+      padding-top: 30px;
+    }
 
     &:before {
       content: '';
@@ -58,7 +68,17 @@
     }
   }
 
-  &__advantage {
+  &__advantages-list {
+    @mixin reset-ul;
+
+    @mixin tablet {
+      order: 1;
+      text-align: left;
+      width: 320px;
+    }
+  }
+
+  &__advantages-item {
     & > b {
       display: block;
       font-size: 18px;
@@ -73,12 +93,47 @@
     }
   }
 
-  &__image-wrapper {
+  &__advantages-img {
     overflow: hidden;
+
+    @mixin tablet {
+      overflow: auto;
+    }
 
     & > img {
       position: relative;
       top: 45px;
     }
+  }
+
+  &__effect-container {
+    display: none;
+    padding-top: 100px;
+    padding-bottom: 86px;
+    padding-left: 310px;
+    text-align: left;
+    background-image: url(../img/bg-timer.png);
+    background-repeat: no-repeat;
+    background-position: 20px 60px;
+
+    @mixin tablet {
+      display: block;
+    }
+  }
+
+  &__effect-title {
+    font-size: 30px;
+    line-height: 36px;
+    color: #000;
+    margin-bottom: 17px;
+    margin-top: 0;
+  }
+
+  &__effect-text {
+    line-height: 24px;
+  }
+
+  &__effect-more-link {
+    color: #d22856;
   }
 }
