@@ -5,6 +5,14 @@
   &__list {
     width: 280px;
     margin: 0 auto;
+
+    @mixin tablet {
+      width: auto;
+    }
+  }
+
+  &__item {
+    flex-direction: column;
   }
 
   &__item-author {
@@ -15,6 +23,24 @@
     color: #000;
     line-height: 30px;
     font-weight: bold;
+
+    @mixin tablet {
+      order: 1;
+      font-size: 20px;
+      line-height: 30px;
+    }
+  }
+
+  &__item-author-info {
+    display: none;
+    order: 3;
+    text-align: center;
+    font-size: 14px;
+    line-height: 30px;
+
+    @mixin tablet {
+      display: block;
+    }
   }
 
   &__item-text {
@@ -22,6 +48,13 @@
     text-align: center;
     font-size: 14px;
     line-height: 30px;
+
+    @mixin tablet {
+      order: 0;
+      font-size: 18px;
+      line-height: 30px;
+      margin-bottom: 40px;
+    }
   }
 
   &__inner {

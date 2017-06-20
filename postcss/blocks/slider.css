@@ -6,6 +6,6 @@
   }
 
   &__item--active {
-    display: block;
+    display: flex;
   }
 }

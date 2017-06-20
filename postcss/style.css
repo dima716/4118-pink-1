@@ -11,7 +11,6 @@
 @import 'blocks/container.css';
 @import 'blocks/page-header.css';
 @import 'blocks/main-nav.css';
-@import 'blocks/slider.css';
 
 /* Index */
 @import 'blocks/intro.css';
@@ -38,3 +37,6 @@
 @import 'blocks/input-check.css';
 @import 'blocks/label-radio.css';
 @import 'blocks/input-radio.css';
+
+
+@import 'blocks/slider.css';
