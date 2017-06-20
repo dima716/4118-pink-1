@@ -5,14 +5,35 @@
     padding-top: 43px;
     padding-bottom: 32px;
 
+    @mixin tablet {
+      padding-bottom: 69px;
+    }
+
     & > p {
       margin: 0;
       font-size: 24px;
       font-weight: lighter;
+
+      & > br {
+        display: none;
+      }
+
+      @mixin tablet {
+        font-size: 40px;
+        text-align: center;
+
+        & > br {
+          display: inline;
+        }
+      }
     }
 
     & > p:first-child {
       margin-bottom: 34px;
+
+      @mixin tablet {
+        margin-bottom: 0;
+      }
     }
 
   }
