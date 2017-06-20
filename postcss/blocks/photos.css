@@ -1,0 +1,87 @@
+.photos {
+  &__promo-text {
+    padding-top: 47px;
+    padding-bottom: 47px;
+    font-size: 14px;
+    line-height: 30px;
+    text-align: center;
+  }
+
+  &__list {
+    @mixin reset-ul;
+  }
+
+  &__item_type_panorama .photos__item-img > img {
+    position: relative;
+    left: -20px;
+  }
+
+  &__item-description {
+    background-color: #f2f2f2;
+    padding-top: 20px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 19px;
+  }
+
+  &__item-img {
+    position: relative;
+    font-size: 0;
+    text-align: center;
+  }
+
+  &__item-text {
+    margin: 0;
+    margin-bottom: 9px;
+    line-height: 24px;
+  }
+
+  &__item-date {
+    font-weight: lighter;
+    font-size: 12px;
+    line-height: 24px;
+    text-transform: uppercase;
+  }
+
+  &__item-author {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+
+  &__item-likes {
+    display: flex;
+    align-items: center;
+    color: #d22856;
+    text-transform: uppercase;
+    line-height: 24px;
+    font-size: 12px;
+  }
+
+  &__item-likes-icon {
+    width: 13px;
+    height: 12px;
+    background-image: url(../img/icon-heart.svg);
+    background-repeat: no-repeat;
+    margin-right: 19px;
+  }
+
+  &__item-likes-number {
+    margin-left: 3px;
+  }
+
+  &__item-badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    line-height: 24px;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #d22856;
+  }
+}

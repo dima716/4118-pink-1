@@ -1,0 +1,7 @@
+.index-page {
+  &__intro {
+    min-height: 461px;
+    justify-content: flex-start;
+    align-items: flex-end;
+  }
+}

@@ -1,0 +1,11 @@
+.slider {
+  overflow: hidden;
+
+  &__item {
+    display: none;
+  }
+
+  &__item--active {
+    display: block;
+  }
+}

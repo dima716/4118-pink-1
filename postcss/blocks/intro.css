@@ -1,0 +1,22 @@
+.intro {
+    display: flex;
+    min-height: 237px;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../img/bg-back-mobile@1x.jpg);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-color: #1d2631;
+
+  &__img {
+    font-size: 0;
+  }
+
+  &__title {
+    color: #fff;
+    align-self: center;
+    text-align: center;
+    margin: 0;
+    font-weight: lighter;
+  }
+}

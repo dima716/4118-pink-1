@@ -2,52 +2,57 @@
 <html lang="ru">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>HTML Academy: Пинк</title>
+  <link rel="stylesheet"
+  href="css/style.css">
 </head>
-<body>
+<body class="index-page">
   <header class="page-header">
     <h1 class="page-header__title">Пинк - простой, веселый и творческий способ делиться фотографиями с друзьями и
-                                   близкими.
+      близкими.
     </h1>
-    <div class="page-header__logo">
-      <img src="http://placehold.it/75x22"
-           width="75"
-           height="22"
-           alt="Пинк">
-    </div>
     <nav class="main-nav">
-      <span class="main-nav__toggler">
-        <span></span>
-      </span>
       <div class="main-nav__wrapper">
-        <ul class="main-nav__list">
-          <li class="main-nav__item">
-            <a href="#">главная</a>
-          </li>
-          <li class="main-nav__item">
-            <a href="#">фотографии</a>
-          </li>
-          <li class="main-nav__item">
-            <a href="#">конкурс</a>
-          </li>
-          <li class="main-nav__item">
-            <a href="#">html academy</a>
-          </li>
-        </ul>
+        <div class="container main-nav__container">
+          <div class="page-header__logo">
+            <img src="img/logo-pink-white-mobile.svg"
+            width="75"
+            height="22"
+            alt="Пинк">
+          </div>
+          <span class="main-nav__toggler">
+            <span></span>
+          </span>
+        </div>
       </div>
+      <ul class="main-nav__list">
+        <li class="main-nav__item">
+          <a href="#">главная</a>
+        </li>
+        <li class="main-nav__item">
+          <a href="#">фотографии</a>
+        </li>
+        <li class="main-nav__item">
+          <a href="#">конкурс</a>
+        </li>
+        <li class="main-nav__item">
+          <a href="#">html academy</a>
+        </li>
+      </ul>
     </nav>
   </header>
-  <section class="intro">
+  <section class="intro index-page__intro">
     <div class="intro__img">
-      <img src="http://placehold.it/320x462"
-           width="320"
-           height="462"
-           alt="Скачать приложение">
+      <img src="img/iphone-hand-mobile@1x.png"
+      width="256"
+      height="286"
+      alt="Скачать приложение">
     </div>
-    <div class="download intro__download">
-      <a class="download__button"
-         href="#">Скачать приложение
-      </a>
+  </section>
+  <section class="download">
+    <div class="container">
+      <a class="btn download__btn" href="#">Скачать приложение</a>
       <div class="download__links">
         <span class="download__link download__link--apple">apple</span>
         <span class="download__link download__link--android">android</span>
@@ -66,65 +71,140 @@
       <p>Нам есть, что вам предложить!</p>
     </div>
     <div class="info__advantages">
-      <div class="info__advantage">
-        <b>Поднимает настроение</b>
-        <p>Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!
-        </p>
+      <div class="container">
+        <div class="info__advantage">
+          <b>Поднимает настроение</b>
+          <p>Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!
+          </p>
+        </div>
+        <div class="info__advantage">
+          <b>Меняет мир вокруг</b>
+          <p>Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект
+          </p>
+        </div>
+        <div class="info__advantage">
+          <b>Заводит новых друзей</b>
+          <p>Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых
+          </p>
+        </div>
+        <div class="info__image-wrapper">
+          <img src="img/iphone-screen-mobile@1x.png"
+          width="157"
+          height="320"
+          alt="Всем привет">
+        </div>
       </div>
-      <div class="info__advantage">
-        <b>Меняет мир вокруг</b>
-        <p>Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект
-        </p>
-      </div>
-      <div class="info__advantage">
-        <b>Заводит новых друзей</b>
-        <p>Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых
-        </p>
-      </div>
-    </div>
-    <div class="info__image">
-      <img src="http://placehold.it/157x320"
-           width="157"
-           height="320"
-           alt="Всем привет">
     </div>
   </section>
   <section class="reviews">
-    <div class="reviews__list slider">
-      <div class="reviews__inner slider__inner">
-        <blockquote class="reviews__item slider__item">
-          «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я
-          познакомился со своей будущей женой в комментариях к выложенной фотографии!»
-        </blockquote>
-      </div>
-      <div class="reviews__pagination slider__pagination">
-        <span class="reviews__pagination-item slider__pagination-item reviews__pagination-item--active"></span>
-        <span class="reviews__pagination-item slider__pagination-item"></span>
-        <span class="reviews__pagination-item slider__pagination-item"></span>
+    <div class="container">
+      <div class="reviews__list slider">
+        <div class="reviews__inner slider__inner">
+          <div class="reviews__item slider__item slider__item--active">
+            <span class="reviews__item-author">Николай Петров</span>
+            <blockquote class="reviews__item-text">
+              «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я
+              познакомился со своей будущей женой в комментариях к выложенной фотографии!»
+            </blockquote>
+          </div>
+          <div class="reviews__item slider__item">
+            <span class="reviews__item-author">Николай Петров</span>
+            <blockquote class="reviews__item-text">
+              «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я
+              познакомился со своей будущей женой в комментариях к выложенной фотографии!»
+            </blockquote>
+          </div>
+          <div class="reviews__item slider__item">
+            <span class="reviews__item-author">Николай Петров</span>
+            <blockquote class="reviews__item-text">
+              «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я
+              познакомился со своей будущей женой в комментариях к выложенной фотографии!»
+            </blockquote>
+          </div>
+        </div>
+        <div class="reviews__pagination slider__pagination">
+          <span class="reviews__pagination-item slider__pagination-item reviews__pagination-item--active"></span>
+          <span class="reviews__pagination-item slider__pagination-item"></span>
+          <span class="reviews__pagination-item slider__pagination-item"></span>
+        </div>
       </div>
     </div>
   </section>
   <section class="prices">
     <div class="prices__list slider">
       <div class="prices__inner slider__inner">
-        <table class="prices__item slider__item">
-          <thead>
-            <tr>
-              <th class="prices__item-header">
-                <span class="prices__item-name">стандарт</span>
-                <span class="prices__item-number">3,99 USD</span>
-                <span class="prices__item-badge">хит</span>
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="prices__item-option prices__item-option--available">розовый фильтр</td>
-              <td class="prices__item-option prices__item-option--available">розовый фильтр</td>
-              <td class="prices__item-option prices__item-option">розовый фильтр</td>
-            </tr>
-          </tbody>
-        </table>
+        <div class="prices__item slider__item">
+          <table>
+            <thead>
+              <tr>
+                <th class="prices__item-header">
+                  <span class="prices__item-name">стандарт</span>
+                  <span class="prices__item-number">3,99 USD</span>
+                  <span class="prices__item-badge">хит</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="prices__item-option prices__item-option--available">розовый фильтр</td>
+              </tr>
+              <tr>
+                <td class="prices__item-option prices__item-option--available">смайлики</td>
+              </tr>
+              <tr>
+                <td class="prices__item-option prices__item-option">комментарии</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="prices__item slider__item slider__item--active">
+          <table>
+            <thead>
+              <tr>
+                <th class="prices__item-header">
+                  <span class="prices__item-name">стандарт</span>
+                  <span class="prices__item-number">3,99 USD</span>
+                  <span class="prices__item-badge">хит</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="prices__item-option prices__item-option--available">розовый фильтр</td>
+              </tr>
+              <tr>
+                <td class="prices__item-option prices__item-option--available">смайлики</td>
+              </tr>
+              <tr>
+                <td class="prices__item-option prices__item-option">комментарии</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="prices__item slider__item">
+          <table>
+            <thead>
+              <tr>
+                <th class="prices__item-header">
+                  <span class="prices__item-name">стандарт</span>
+                  <span class="prices__item-number">3,99 USD</span>
+                  <span class="prices__item-badge">хит</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="prices__item-option prices__item-option--available">розовый фильтр</td>
+              </tr>
+              <tr>
+                <td class="prices__item-option prices__item-option--available">смайлики</td>
+              </tr>
+              <tr>
+                <td class="prices__item-option prices__item-option">комментарии</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
       <div class="prices__pagination slider__pagination">
         <span class="prices__pagination-item slider__pagination-item"></span>
@@ -148,18 +228,18 @@
           </li>
           <li class="contacts__info-item">
             <b>Приезжайте в гости:</b>
-            <a>ул. Большая Конюшенная, 19/8
+            <a>ул. Большая<br> Конюшенная, 19/8
             </a>
           </li>
         </ul>
       </div>
       <div class="contacts__map">
-        <img src="http://placehold.it/320x200"
-             width="320"
-             height="200"
-             alt="Где мы находимся на карте">
       </div>
     </div>
   </footer>
+  <script type="text/javascript" src="js/main-menu.js"></script>
+  <script type="text/javascript" src="js/slider.js"></script>
+  <script type="text/javascript" src="js/contacts.js"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAI5Sx0u8rHa3jBle90UsBrVC_ewBABOcI&callback=initMap"></script>
 </body>
 </html>

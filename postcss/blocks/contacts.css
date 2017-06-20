@@ -1,0 +1,68 @@
+.contacts {
+  position: relative;
+  padding-top: 44px;
+
+  &__questions {
+    margin: 0;
+    margin-bottom: 40px;
+    font-size: 24px;
+    font-weight: lighter;
+    text-align: center;
+  }
+
+  &__info {
+    position: relative;
+    z-index: 1;
+    padding-bottom: 37px;
+    background-color: #fff;
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 100%;
+      display: block;
+      height: 35px;
+      width: 100%;
+      background-image: url(../img/bg-triangle-white-footer.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+
+    }
+  }
+
+  &__info-list {
+    @mixin reset-ul;
+  }
+
+  &__info-item {
+    margin-bottom: 23px;
+
+    & > b {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 18px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    & > a {
+      display: block;
+      text-decoration: none;
+      text-align: center;
+      font-size: 24px;
+      font-weight: lighter;
+      color: #d22856;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__map {
+    position: absolute;
+    width: 100%;
+    height: 200px;
+    z-index: -1;
+  }
+}
