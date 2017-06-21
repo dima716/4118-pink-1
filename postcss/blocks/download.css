@@ -10,6 +10,15 @@
     order: 0;
   }
 
+  @mixin desktop {
+    padding-top: 40px;
+    padding-bottom: 123px;
+  }
+
+  @mixin desktop {
+    width: 310px;
+  }
+
   &__text {
     display: none;
     color: #fff;
@@ -21,6 +30,11 @@
     @mixin tablet {
       display: block;
     }
+
+    @mixin desktop {
+      font-size: 50px;
+      margin-bottom: 60px;
+    }
   }
 
   &__links {
@@ -28,6 +42,10 @@
     justify-content: space-around;
     align-items: center;
     margin-top: 32px;
+
+    @mixin desktop {
+      margin-top: 65px;
+    }
   }
 
   &__link {
@@ -62,6 +80,15 @@
     line-height: 24px;
     color: #fff;
     font-weight: lighter;
+
+    @mixin tablet {
+      margin-top: 37px;
+    }
+
+    @mixin desktop {
+      margin-top: 57px;
+      font-size: 18px;
+    }
   }
 
   &__btn {
