@@ -6,6 +6,10 @@
       display: flex;
       justify-content: space-around;
     }
+
+    @mixin desktop {
+      flex-direction: column;
+    }
   }
 
   &__offer {
@@ -14,6 +18,11 @@
 
     @mixin tablet {
       padding-bottom: 69px;
+    }
+
+    @mixin desktop {
+      padding-top: 74px;
+      padding-bottom: 145px;
     }
 
     & > p {
@@ -32,6 +41,10 @@
         & > br {
           display: inline;
         }
+      }
+
+      @mixin desktop {
+        font-size: 50px;
       }
     }
 
@@ -76,13 +89,33 @@
       text-align: left;
       width: 320px;
     }
+
+    @mixin desktop {
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+      padding-top: 60px;
+      position: relative;
+      z-index: 1;
+      background-color: #f2f2f2;
+    }
   }
 
   &__advantages-item {
+    @mixin desktop {
+      text-align: center;
+      flex-basis: 245px;
+    }
+
     & > b {
       display: block;
       font-size: 18px;
       line-height: 18px;
+
+      @mixin desktop {
+        font-size: 30px;
+        line-height: 30px;
+      }
     }
 
     & > p {
@@ -90,50 +123,122 @@
       margin-bottom: 35px;
       font-size: 14px;
       line-height: 24px;
+
+      @mixin desktop {
+        font-size: 18px;
+        line-height: 30px;
+      }
     }
   }
 
-  &__advantages-img {
-    overflow: hidden;
+  &__advantages-images {
+    @mixin desktop {
+     display: flex;
+     justify-content: space-around;
+     position: relative;
+     margin-top: -193px;
+     z-index: 0;
+     top: 66px;
+   }
+ }
 
-    @mixin tablet {
-      overflow: auto;
-    }
+ &__advantages-img {
+  overflow: hidden;
 
-    & > img {
-      position: relative;
-      top: 45px;
-    }
+  @mixin desktop {
+    overflow: visible;
   }
 
-  &__effect-container {
-    display: none;
-    padding-top: 100px;
-    padding-bottom: 86px;
-    padding-left: 310px;
-    text-align: left;
-    background-image: url(../img/bg-timer.png);
-    background-repeat: no-repeat;
-    background-position: 20px 60px;
-
-    @mixin tablet {
+  &:after {
+    @mixin desktop {
+      content: '';
+      height: 0;
+      width: 150%;
+      margin-left: -25%;
       display: block;
+      box-shadow: 0 -65px 10px 1px #000;
     }
   }
 
-  &__effect-title {
-    font-size: 30px;
-    line-height: 36px;
-    color: #000;
-    margin-bottom: 17px;
-    margin-top: 0;
+  & > img {
+    position: relative;
+    top: 45px;
+
+    @mixin tablet {
+      top: 0;
+    }
+  }
+}
+
+&__advantages-img:nth-child(1),
+&__advantages-img:nth-child(2) {
+  display: none;
+
+  @mixin desktop {
+    display: block;
+  }
+}
+
+&__effect {
+  @mixin desktop {
+    background-color: #f2f2f2;
+  }
+}
+
+&__effect-container {
+  display: none;
+  padding-top: 100px;
+  padding-bottom: 86px;
+  padding-left: 310px;
+  text-align: left;
+  background-image: url(../img/bg-timer.png);
+  background-repeat: no-repeat;
+  background-position: 20px 60px;
+
+  @mixin tablet {
+    display: block;
   }
 
-  &__effect-text {
-    line-height: 24px;
+  @mixin desktop {
+    padding-left: 500px;
+    background-position: 130px center
+  }
+}
+
+&__effect-title {
+  font-size: 30px;
+  line-height: 36px;
+  color: #000;
+  margin-bottom: 17px;
+  margin-top: 0;
+
+  @mixin desktop {
+    line-height: 30px;
+    margin-bottom: 24px;
   }
 
-  &__effect-more-link {
-    color: #d22856;
+  & > br {
+    @mixin desktop {
+      display: none;
+    }
   }
+}
+
+&__effect-text {
+  line-height: 24px;
+
+  @mixin desktop {
+    font-size: 18px;
+    line-height: 30px;
+    margin-bottom: 30px;
+  }
+}
+
+&__effect-more-link {
+  color: #d22856;
+
+  @mixin desktop {
+    font-size: 18px;
+  }
+}
 }
