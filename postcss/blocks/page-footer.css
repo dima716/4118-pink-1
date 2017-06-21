@@ -5,6 +5,11 @@
   justify-content: space-around;
   min-height: 285px;
 
+  @mixin tablet {
+    flex-direction: row;
+    min-height: 127px;
+  }
+
   &__logo {
     width: 147px;
     height: 40px;

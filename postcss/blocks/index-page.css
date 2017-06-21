@@ -14,5 +14,9 @@
 
   &__page-footer {
     display: none;
+
+    @mixin tablet {
+      display: flex;
+    }
   }
 }
