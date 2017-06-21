@@ -11,4 +11,8 @@
       flex-direction: row;
     }
   }
+
+  &__page-footer {
+    display: none;
+  }
 }

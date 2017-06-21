@@ -1,6 +1,7 @@
 .contacts {
   position: relative;
   padding-top: 44px;
+  padding-bottom: 200px;
 
   &__questions {
     margin: 0;
@@ -26,12 +27,22 @@
       background-image: url(../img/bg-triangle-white-footer.svg);
       background-repeat: no-repeat;
       background-size: cover;
+      background-position: center -1px;
 
+      @mixin tablet {
+        height: 70px;
+      }
     }
   }
 
   &__info-list {
     @mixin reset-ul;
+
+    @mixin tablet {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
   }
 
   &__info-item {
