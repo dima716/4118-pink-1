@@ -2,12 +2,35 @@
   padding-top: 44px;
   padding-bottom: 70px;
 
+  @mixin desktop {
+    padding-top: 186px;
+    position: relative;
+    padding-bottom: 109px;
+  }
+
+  &:before {
+    @mixin desktop {
+      content: '';
+      width: 79px;
+      height: 63px;
+      position: absolute;
+      background-image: url(../img/quotes.png);
+      top: 73px;
+      left: 50%;
+      margin-left: -40px;
+    }
+  }
+
   &__list {
     width: 280px;
     margin: 0 auto;
 
     @mixin tablet {
       width: auto;
+    }
+
+    @mixin desktop {
+      position: relative;
     }
   }
 
@@ -30,6 +53,10 @@
       font-size: 20px;
       line-height: 30px;
     }
+
+    @mixin desktop {
+      font-size: 24px;
+    }
   }
 
   &__item-author-info {
@@ -41,6 +68,10 @@
 
     @mixin tablet {
       display: block;
+    }
+
+    @mixin desktop {
+      font-size: 18px;
     }
   }
 
@@ -56,16 +87,28 @@
       line-height: 30px;
       margin-bottom: 40px;
     }
+
+    @mixin desktop {
+      width: 680px;
+    }
   }
 
   &__inner {
     display: flex;
     margin-bottom: 32px;
+
+    @mixin desktop {
+      justify-content: center;
+    }
   }
 
   &__pagination {
     display: flex;
     justify-content: center;
+
+    @mixin desktop {
+      display: none;
+    }
   }
 
   &__pagination-item {
@@ -93,5 +136,28 @@
   &__pagination-item--active {
     border-color: #283645;
     background-color: #fff;
+  }
+
+  &__control {
+    position: absolute;
+    font-size: 85px;
+    top: 20px;
+    width: 22px;
+    height: 41px;
+    border: none;
+    background-color: initial;
+    background-repeat: no-repeat;
+    outline: none;
+    cursor: pointer;
+  }
+
+  &__control--previous {
+    left: 0;
+    background-image: url(../img/left-arrow.png);
+  }
+
+  &__control--next {
+    right: 0;
+    background-image: url(../img/right-arrow.png);
   }
 }

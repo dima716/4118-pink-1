@@ -17,10 +17,11 @@
 
     if (sliderInner) {
       var sliderItems = sliderInner.querySelectorAll('.slider__item'),
-          slideWidth = sliderItems[0].offsetWidth,
-          sliderPagination = this.slider.querySelector('.slider__pagination'),
-          sliderPaginationItems = sliderPagination.querySelectorAll('.slider__pagination-item'),
-          transformValue = 0;
+      slideWidth = sliderItems[0].offsetWidth,
+      sliderPagination = this.slider.querySelector('.slider__pagination'),
+      sliderPaginationItems = sliderPagination.querySelectorAll('.slider__pagination-item'),
+      sliderPrevious = this.slider.querySelector('.slider__control--previous'),
+      sliderNext = this.slider.querySelector('.slider__control--next');
 
 
       [].forEach.call(sliderPaginationItems, function(item, index) {
@@ -52,6 +53,36 @@
           target = target.parentNode;
         }
       }).bind(this));
+
+      if (sliderPrevious) {
+        sliderPrevious.addEventListener('click', (function (event) {
+          if (currentIndex - 1 < 0) return;
+
+          sliderItems[currentIndex].classList.remove('slider__item--active');
+          currentIndex = currentIndex - 1;
+
+          clearSliderPaginationItems.call(this);
+          sliderPaginationItems[currentIndex].classList.add(this.activePaginatorItemClass);
+
+          sliderItems[currentIndex].classList.add('slider__item--active');
+          return;
+        }).bind(this));
+      }
+
+      if (sliderNext) {
+        sliderNext.addEventListener('click', (function (event) {
+          if (currentIndex + 1 >= sliderItems.length) return;
+
+          sliderItems[currentIndex].classList.remove('slider__item--active');
+          currentIndex = currentIndex + 1;
+
+          clearSliderPaginationItems.call(this);
+          sliderPaginationItems[currentIndex].classList.add(this.activePaginatorItemClass);
+
+          sliderItems[currentIndex].classList.add('slider__item--active');
+          return;
+        }).bind(this));
+      }
     }
   };
 
