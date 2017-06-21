@@ -12,6 +12,7 @@
   }
 
   &__item {
+    display: none;
     flex-direction: column;
   }
 
