@@ -4,14 +4,10 @@
   padding-bottom: 32px;
 
   @mixin tablet {
+    width: 300px;
+    padding-bottom: 110px;
     background-color: transparent;
     order: 0;
-  }
-
-  &__container {
-    @mixin tablet {
-      width: 300px;
-    }
   }
 
   &__text {
