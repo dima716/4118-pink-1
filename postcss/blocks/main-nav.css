@@ -147,6 +147,6 @@
   }
 
   &--open .main-nav__list {
-    transform: translateY(73px);
+    transform: translateY(72px);
   }
 }
