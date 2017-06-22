@@ -19,11 +19,6 @@
   &__container {
     width: auto;
     padding: 0;
-
-    @mixin tablet {
-      width: 660px;
-      padding: 0 20px;
-    }
   }
 
   &__item {
@@ -35,6 +30,8 @@
   }
 
   &__inner {
+    justify-content: center;
+
     @mixin tablet {
       display: flex;
       width: 100%;
@@ -49,6 +46,10 @@
     @mixin tablet {
       width: 155px;
       border-collapse: collapse;
+    }
+
+    @mixin desktop {
+      width: 235px;
     }
   }
 

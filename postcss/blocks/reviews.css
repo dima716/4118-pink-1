@@ -139,6 +139,7 @@
   }
 
   &__control {
+    display: none;
     position: absolute;
     font-size: 85px;
     top: 20px;
@@ -149,6 +150,10 @@
     background-repeat: no-repeat;
     outline: none;
     cursor: pointer;
+
+    @mixin desktop {
+      display: block;
+    }
   }
 
   &__control--previous {
