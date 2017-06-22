@@ -3,12 +3,33 @@
   padding-top: 44px;
   padding-bottom: 200px;
 
+  @mixin tablet {
+    padding-bottom: 376px;
+  }
+
+  @mixin desktop {
+    padding-bottom: 503px;
+  }
+
   &__questions {
     margin: 0;
     margin-bottom: 40px;
     font-size: 24px;
     font-weight: lighter;
     text-align: center;
+
+    @mixin desktop {
+      font-size: 50px;
+      margin-bottom: 65px;
+    }
+
+    & > br {
+      display: none;
+
+      @mixin desktop {
+        display: block;
+      }
+    }
   }
 
   &__info {
@@ -16,6 +37,10 @@
     z-index: 1;
     padding-bottom: 37px;
     background-color: #fff;
+
+    @mixin desktop {
+      padding: 0;
+    }
 
     &:after {
       content: '';
@@ -32,6 +57,10 @@
 
       @mixin tablet {
         height: 70px;
+      }
+
+      @mixin desktop {
+        height: 127px;
       }
     }
   }
@@ -55,6 +84,10 @@
       font-size: 18px;
       font-weight: bold;
       text-align: center;
+
+      @mixin desktop {
+        margin-bottom: 25px;
+      }
     }
 
     & > a {
@@ -71,9 +104,23 @@
     }
   }
 
+  &__info-item:nth-child(1) {
+    @mixin desktop {
+      order: 1;
+    }
+  }
+
   &__map {
     position: absolute;
     width: 100%;
     height: 200px;
+
+    @mixin tablet {
+      padding-bottom: 376px;
+    }
+
+    @mixin desktop {
+      height: 503px;
+    }
   }
 }

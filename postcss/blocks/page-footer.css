@@ -10,6 +10,10 @@
     min-height: 127px;
   }
 
+  @mixin desktop {
+    min-height: 197px;
+  }
+
   &__logo {
     width: 147px;
     height: 40px;
