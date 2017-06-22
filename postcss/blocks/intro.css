@@ -1,11 +1,16 @@
 .intro {
   display: flex;
   min-height: 237px;
+  justify-content: center;
   align-items: center;
   background-image: url(../img/bg-back-mobile@1x.jpg);
   background-repeat: no-repeat;
   background-position: top center;
   background-color: #1d2631;
+
+  @mixin tablet {
+    min-height: 440px;
+  }
 
   &__container {
     padding-top: 462px;
@@ -39,5 +44,9 @@
     text-align: center;
     margin: 0;
     font-weight: lighter;
+
+    @mixin tablet {
+      font-size: 50px;
+    }
   }
 }
