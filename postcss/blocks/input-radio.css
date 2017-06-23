@@ -1,0 +1,7 @@
+.input-radio {
+  display: none;
+
+  &:checked + .label-radio:before {
+    background-color: #d22856;
+  }
+}

@@ -1,0 +1,8 @@
+.label-text {
+  position: absolute;
+  top: -35px;
+  left: 23px;
+  color: #d22856;
+  text-transform: uppercase;
+  line-height: 30px;
+}

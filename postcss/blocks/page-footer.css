@@ -1,0 +1,57 @@
+.page-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  min-height: 285px;
+
+  @mixin tablet {
+    flex-direction: row;
+    min-height: 127px;
+  }
+
+  @mixin desktop {
+    min-height: 197px;
+  }
+
+  &__logo {
+    width: 147px;
+    height: 40px;
+  }
+
+  &__logo:hover > svg > g > path {
+    fill: #d22856;
+  }
+
+  &__logo:active {
+    opacity: 0.3;
+
+    & > svg > g > path {
+      fill: initial;
+    }
+  }
+
+  &__developed-by {
+    display: flex;
+    align-items: center;
+  }
+
+  &__developed-by-logo {
+    margin-left: 15px;
+    font-size: 0;
+
+    & > svg > path {
+      fill: #d22856
+    }
+  }
+
+  &__developed-by-logo:hover {
+    & > svg > path {
+      fill: #283645;
+    }
+  }
+
+  &__developed-by-logo:active {
+    opacity: 0.3;
+  }
+}

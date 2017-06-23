@@ -1,0 +1,17 @@
+.index-page {
+  &__intro {
+    @mixin tablet {
+      padding-top: 184px;
+      min-height: auto;
+      flex-direction: row;
+    }
+  }
+
+  &__page-footer {
+    display: none;
+
+    @mixin tablet {
+      display: flex;
+    }
+  }
+}

@@ -1,0 +1,10 @@
+.input-check {
+  display: none;
+
+  &:checked + .label-check:before {
+    content: '';
+    background-image: url(../img/tick.png);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
