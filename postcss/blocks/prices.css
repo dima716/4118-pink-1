@@ -16,9 +16,75 @@
     z-index: -1;
   }
 
+  &__container {
+    width: auto;
+    padding: 0;
+  }
+
   &__item {
-    & > table {
+    display: none;
+
+    @mixin tablet {
+      display: flex;
+    }
+  }
+
+  &__inner {
+    justify-content: center;
+
+    @mixin tablet {
+      display: flex;
       width: 100%;
+      align-items: flex-end;
+      margin-bottom: 68px;
+    }
+  }
+
+  &__item > table {
+    width: 100%;
+
+    @mixin tablet {
+      width: 155px;
+      border-collapse: collapse;
+    }
+
+    @mixin desktop {
+      width: 235px;
+    }
+  }
+
+  &__item > table tr {
+    @mixin tablet {
+      border-bottom: 2px solid #e5e5e5;
+      border-right: 2px solid #e5e5e5;
+    }
+  }
+
+  &__item:first-child > table tr {
+    @mixin tablet {
+      border-left: 2px solid #e5e5e5;
+    }
+  }
+
+  &__item--filters-name {
+    display: none;
+    border-top: 2px solid #e5e5e5;
+
+    @mixin tablet {
+      display: flex;
+    }
+  }
+
+  &__item--filters-name &__item-option {
+    &:before {
+      @mixin tablet {
+        display: none;
+      }
+    }
+
+    @mixin tablet {
+      font-size: 14px;
+      text-transform: none;
     }
   }
 
@@ -29,6 +95,11 @@
     padding-top: 21px;
     padding-bottom: 17px;
     overflow: hidden;
+
+    @mixin tablet {
+      padding-top: 13px;
+      padding-bottom: 9px;
+    }
   }
 
   &__item-name {
@@ -37,6 +108,10 @@
     line-height: 30px;
     color: #fff;
     text-transform: uppercase;
+
+    @mixin tablet {
+      font-size: 16px;
+    }
   }
 
   &__item-number {
@@ -45,6 +120,10 @@
     line-height: 30px;
     font-weight: lighter;
     color: #fff;
+
+    @mixin tablet {
+      font-size: 16px;
+    }
   }
 
   &__item-badge {
@@ -57,6 +136,11 @@
     padding: 7px;
     width: 150px;
     text-transform: uppercase;
+
+    @mixin tablet {
+      top: 5px;
+      left: -55px;
+    }
   }
 
   &__item-option {
@@ -68,6 +152,10 @@
     line-height: 30px;
     text-transform: uppercase;
     background-color: #fff;
+
+    @mixin tablet {
+      font-size: 0;
+    }
 
     &:before {
       content: '';
@@ -81,6 +169,11 @@
       right: 15px;
       top: 50%;
       transform: translateY(-50%);
+
+      @mixin tablet {
+        transform: translateX(-50%) translateY(-50%);
+        left: 50%;
+      }
     }
   }
 
@@ -95,6 +188,10 @@
     justify-content: center;
     padding-bottom: 47px;
     padding-top: 47px;
+
+    @mixin tablet {
+      display: none;
+    }
   }
 
   &__pagination-item {

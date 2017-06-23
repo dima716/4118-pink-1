@@ -11,7 +11,7 @@
 @import 'blocks/container.css';
 @import 'blocks/page-header.css';
 @import 'blocks/main-nav.css';
-@import 'blocks/slider.css';
+@import 'blocks/page-footer.css';
 
 /* Index */
 @import 'blocks/intro.css';
@@ -25,7 +25,6 @@
 /* Photo */
 @import 'blocks/photos.css';
 @import 'blocks/upload.css';
-@import 'blocks/page-footer.css';
 @import 'blocks/social-links.css';
 @import 'blocks/social-link.css';
 
@@ -38,3 +37,6 @@
 @import 'blocks/input-check.css';
 @import 'blocks/label-radio.css';
 @import 'blocks/input-radio.css';
+
+
+@import 'blocks/slider.css';

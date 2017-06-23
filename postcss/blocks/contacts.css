@@ -1,6 +1,15 @@
 .contacts {
   position: relative;
   padding-top: 44px;
+  padding-bottom: 200px;
+
+  @mixin tablet {
+    padding-bottom: 376px;
+  }
+
+  @mixin desktop {
+    padding-bottom: 503px;
+  }
 
   &__questions {
     margin: 0;
@@ -8,6 +17,19 @@
     font-size: 24px;
     font-weight: lighter;
     text-align: center;
+
+    @mixin desktop {
+      font-size: 50px;
+      margin-bottom: 65px;
+    }
+
+    & > br {
+      display: none;
+
+      @mixin desktop {
+        display: block;
+      }
+    }
   }
 
   &__info {
@@ -16,8 +38,13 @@
     padding-bottom: 37px;
     background-color: #fff;
 
+    @mixin desktop {
+      padding: 0;
+    }
+
     &:after {
       content: '';
+      pointer-events: none;
       position: absolute;
       top: 100%;
       display: block;
@@ -26,12 +53,26 @@
       background-image: url(../img/bg-triangle-white-footer.svg);
       background-repeat: no-repeat;
       background-size: cover;
+      background-position: center -1px;
 
+      @mixin tablet {
+        height: 70px;
+      }
+
+      @mixin desktop {
+        height: 127px;
+      }
     }
   }
 
   &__info-list {
     @mixin reset-ul;
+
+    @mixin tablet {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
   }
 
   &__info-item {
@@ -43,6 +84,10 @@
       font-size: 18px;
       font-weight: bold;
       text-align: center;
+
+      @mixin desktop {
+        margin-bottom: 25px;
+      }
     }
 
     & > a {
@@ -59,10 +104,23 @@
     }
   }
 
+  &__info-item:nth-child(1) {
+    @mixin desktop {
+      order: 1;
+    }
+  }
+
   &__map {
     position: absolute;
     width: 100%;
     height: 200px;
-    z-index: -1;
+
+    @mixin tablet {
+      padding-bottom: 376px;
+    }
+
+    @mixin desktop {
+      height: 503px;
+    }
   }
 }

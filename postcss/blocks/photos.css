@@ -1,19 +1,72 @@
 .photos {
   &__promo-text {
+    width: 245px;
+    margin: 0 auto;
     padding-top: 47px;
     padding-bottom: 47px;
     font-size: 14px;
     line-height: 30px;
     text-align: center;
+
+    @mixin tablet {
+      width: 440px;
+      font-size: 18px;
+      padding-top: 94px;
+      padding-bottom: 74px;
+    }
   }
 
   &__list {
-    @mixin reset-ul;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style: none;
+    margin: 0;
   }
 
-  &__item_type_panorama .photos__item-img > img {
+  &__item {
     position: relative;
-    left: -20px;
+    margin-bottom: 20px;
+
+    @mixin tablet {
+      width: 300px;
+    }
+  }
+
+  &__item_type_panorama {
+    position: relative;
+    padding-top: 140px;
+
+    @mixin tablet {
+      width: auto;
+      padding-top: 510px;
+      margin-bottom: 50px;
+    }
+  }
+
+  &__item_type_panorama &__item-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  &__item_type_panorama &__item-img img {
+    width: 100%;
+
+    @mixin tablet {
+      height: 510px;
+    }
+  }
+
+  &__item_type_panorama &__item-description {
+    min-height: auto;
+  }
+
+  &__item_type_panorama &__item-text {
+    @mixin tablet {
+      margin-bottom: 0;
+    }
   }
 
   &__item-description {
@@ -22,12 +75,26 @@
     padding-left: 25px;
     padding-right: 25px;
     padding-bottom: 19px;
+
+    @mixin tablet {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      min-height: 155px;
+    }
   }
 
   &__item-img {
     position: relative;
     font-size: 0;
     text-align: center;
+  }
+
+  &__item-img > img {
+    @mixin tablet {
+      width: 100%;
+      height: 300px;
+    }
   }
 
   &__item-text {
@@ -56,6 +123,18 @@
     text-transform: uppercase;
     line-height: 24px;
     font-size: 12px;
+
+    @mixin tablet {
+      margin-top: auto;
+    }
+  }
+
+  &__item_type_panorama &__item-likes {
+    @mixin tablet {
+      position: absolute;
+      right: 30px;
+      top: 18px;
+    }
   }
 
   &__item-likes-icon {
@@ -64,16 +143,26 @@
     background-image: url(../img/icon-heart.svg);
     background-repeat: no-repeat;
     margin-right: 19px;
+
+    @mixin tablet {
+      order: 1;
+      margin-left: auto;
+      margin-right: 0;
+    }
   }
 
   &__item-likes-number {
     margin-left: 3px;
+
+    @mixin tablet {
+      margin-right: 18px;
+    }
   }
 
   &__item-badge {
     position: absolute;
     top: 0;
-    right: 0;
+    right: 20px;
     padding-left: 20px;
     padding-right: 20px;
     padding-top: 7px;
@@ -83,5 +172,9 @@
     text-transform: uppercase;
     color: #fff;
     background-color: #d22856;
+
+    @mixin tablet {
+      top: 57px;
+    }
   }
 }
