@@ -11,6 +11,16 @@
     padding-top: 20px;
     background-color: #f2f2f2;
     border-bottom: 1px solid #dddfe0;
+
+    @mixin tablet {
+      padding-top: 57px;
+    }
+  }
+
+  &__tool-container {
+    @mixin tablet {
+      display: flex;
+    }
   }
 
   &__tool-btn {
@@ -32,6 +42,10 @@
 
     &:first-child {
       margin-bottom: 12px;
+
+      @mixin tablet {
+        margin-bottom: 24px;
+      }
     }
 
     &--post {
@@ -68,14 +82,29 @@
     font-size: 0;
     text-align: center;
     margin-bottom: 40px;
+
+    @mixin tablet {
+      width: 300px;
+      margin-right: 45px;
+      margin-bottom: 54px;
+    }
+
+    & > img {
+      width: 100%;
+      height: 400px;
+    }
+  }
+
+  &__tool-controls {
+    flex-grow: 1;
   }
 
   &__tool-range {
+    display: none;
     position: relative;
     height: 2px;
     margin: 0 20px;
     background-color: #283645;
-    display: flex;
     align-items: center;
     justify-content: center;
 
@@ -88,6 +117,28 @@
       border: 2px solid #d22856;
       border-radius: 50%;
       background-color: #f2f2f2;
+
+      &:hover,
+      &:active {
+        background-color: #d22856;
+      }
+
+      @mixin tablet {
+        margin-top: -7px;
+      }
+    }
+
+    @mixin tablet {
+      display: block;
+      flex-grow: 1;
+    }
+  }
+
+  &__tool-range--global {
+    display: flex;
+
+    @mixin tablet {
+      display: none;
     }
   }
 
@@ -97,12 +148,35 @@
 
   &__tool-settings {
     padding-bottom: 34px;
+
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: #dddfe0;
+      margin-top: 34px;
+
+      @mixin tablet {
+        display: none;
+      }
+    }
+
+    @mixin tablet {
+      padding-bottom: 0;
+      margin-top: 9px;
+    }
   }
 
   &__tool-actions {
     padding-top: 40px;
     padding-bottom: 40px;
     background-color: #f2f2f2;
+
+    @mixin tablet {
+      padding-top: 67px;
+    }
   }
 
   &__tool-instruments {
@@ -110,14 +184,92 @@
     margin-bottom: 27px;
     justify-content: space-around;
     align-items: center;
+
+    @mixin tablet {
+      flex-direction: column;
+      align-items: stretch;
+      margin-bottom: 0;
+    }
   }
 
   &__tool-instrument {
-    cursor: pointer;
     fill: #b5b9be;
 
     &:hover {
       fill: #8d949b;
+    }
+
+    @mixin tablet {
+      display: flex;
+      flex-grow: 1;
+      align-items: center;
+      padding-bottom: 24px;
+      border-bottom: 1px solid #dddfe0;
+      margin-bottom: 26px;
+      fill: #d22856;
+
+      &:hover {
+        fill: #d22856;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    & > i {
+      display: block;
+      cursor: pointer;
+      width: 48px;
+      height: 48px;
+
+      @mixin tablet {
+        cursor: initial;
+      }
+    }
+
+    & > i > svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__tool-instrument--resize  .upload__tool-range > span {
+    right: 50px;
+  }
+
+  &__tool-instrument--resize > i {
+    @mixin tablet {
+      width: 22px;
+      height: 22px;
+    }
+  }
+
+  &__tool-instrument--fill .upload__tool-range > span {
+    left: 32px;
+  }
+
+  &__tool-instrument--fill > i {
+    @mixin tablet {
+      width: 24px;
+      height: 22px;
+    }
+  }
+
+  &__tool-instrument--contrast .upload__tool-range {
+    margin-left: 23px
+  }
+
+  &__tool-instrument--contrast .upload__tool-range > span {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &__tool-instrument--contrast > i {
+    @mixin tablet {
+      width: 16px;
+      height: 16px;
+      margin-left: 5px;
     }
   }
 
