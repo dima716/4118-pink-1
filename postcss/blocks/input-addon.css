@@ -1,0 +1,22 @@
+.input-addon {
+  display: none;
+  padding-top: 22px;
+  padding-right: 22px;
+  padding-left: 20px;
+  padding-bottom: 22px;
+  background-color: #e5e5e5;
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  @mixin tablet {
+    display: block;
+  }
+}
+
+.input-addon--phone {
+  background-image: url(../img/icon-phone.png);
+}
+
+.input-addon--email {
+  background-image: url(../img/icon-mail.png);
+}

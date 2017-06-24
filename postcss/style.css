@@ -32,6 +32,8 @@
 @import 'blocks/form-page.css';
 @import 'blocks/form.css';
 @import 'blocks/label-text.css';
+@import 'blocks/input-group.css';
+@import 'blocks/input-addon.css';
 @import 'blocks/input-text.css';
 @import 'blocks/label-check.css';
 @import 'blocks/input-check.css';
