@@ -40,36 +40,32 @@
 
   &__item_type_panorama {
     position: relative;
-    padding-top: 140px;
+    width: 100%;
 
     @mixin tablet {
-      width: auto;
-      padding-top: 510px;
       margin-bottom: 50px;
-    }
-
-    @mixin desktop {
-      padding-top: 506px;
     }
   }
 
   &__item_type_panorama &__item-img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-  }
-
-  &__item_type_panorama &__item-img img {
-    width: 100%;
+    background-image: url(../img/panorama-mobile@1x.jpg);
+    min-height: 140px;
+    background-repeat: no-repeat;
+    background-size: 100% 140px;
 
     @mixin tablet {
-      height: 510px;
+      min-height: 510px;
+      background-size: 100% 510px;
     }
 
     @mixin desktop {
-      height: 506px;
+      min-height: 506px;
+      background-size: 100% 506px;
     }
+  }
+
+  &__item_type_panorama &__item-img > .container {
+    position: relative;
   }
 
   &__item_type_panorama &__item-description {
