@@ -14,6 +14,11 @@
       padding-top: 94px;
       padding-bottom: 74px;
     }
+
+    @mixin desktop {
+      width: 575px;
+      padding-bottom: 86px;
+    }
   }
 
   &__list {
@@ -42,6 +47,10 @@
       padding-top: 510px;
       margin-bottom: 50px;
     }
+
+    @mixin tablet {
+      padding-top: 506px;
+    }
   }
 
   &__item_type_panorama &__item-img {
@@ -56,6 +65,10 @@
 
     @mixin tablet {
       height: 510px;
+    }
+
+    @mixin desktop {
+      height: 506px;
     }
   }
 
