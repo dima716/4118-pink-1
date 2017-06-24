@@ -26,7 +26,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     list-style: none;
-    margin: 0;
+    margin: 0 auto;
   }
 
   &__item {
@@ -48,7 +48,7 @@
       margin-bottom: 50px;
     }
 
-    @mixin tablet {
+    @mixin desktop {
       padding-top: 506px;
     }
   }
@@ -188,6 +188,10 @@
 
     @mixin tablet {
       top: 57px;
+    }
+
+    @mixin desktop {
+      right: 130px;
     }
   }
 }
