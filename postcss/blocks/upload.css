@@ -20,7 +20,6 @@
   &__tool {
     padding-top: 20px;
     background-color: #f2f2f2;
-    /*border-bottom: 1px solid #dddfe0;*/
 
     @mixin tablet {
       padding-top: 57px;

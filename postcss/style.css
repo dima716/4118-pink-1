@@ -25,6 +25,7 @@
 
 /* Photo */
 @import 'blocks/photos.css';
+@import 'blocks/photos-page.css';
 @import 'blocks/upload.css';
 @import 'blocks/social-links.css';
 @import 'blocks/social-link.css';

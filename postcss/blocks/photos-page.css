@@ -1,0 +1,8 @@
+.photos-page {
+  &__page-footer {
+    @mixin desktop {
+      padding-top: 98px;
+    }
+  }
+}
+

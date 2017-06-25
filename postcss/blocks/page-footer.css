@@ -1,15 +1,23 @@
 .page-footer {
   display: flex;
+  box-sizing: content-box;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  min-height: 241px;
-  padding-bottom: 36px;
+  min-height: 205px;
+  padding-top: 40px;
+  padding-bottom: 40px;
 
   @mixin tablet {
+    box-sizing: border-box;
     flex-direction: row;
     min-height: auto;
     justify-content: space-around;
+  }
+
+  @mixin desktop {
+    padding-top: 70px;
+    padding-bottom: 70px;
   }
 
   &__logo {

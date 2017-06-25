@@ -56,6 +56,10 @@
   &__item {
     @mixin tablet {
       margin-bottom: 52px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
 
     @mixin desktop {
@@ -290,11 +294,11 @@
   }
 
   &__actions {
-    margin-bottom: 58px;
+    /*margin-bottom: 58px;*/
 
     @mixin tablet {
       order: 4;
-      margin-bottom: 86px;
+      /*margin-bottom: 86px;*/
     }
 
     @mixin desktop {

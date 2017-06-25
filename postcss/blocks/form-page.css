@@ -2,4 +2,12 @@
   &__title {
     margin-top: 35px;
   }
+
+  &__page-footer {
+    padding-top: 56px;
+
+    @mixin tablet {
+      padding-top: 86px;
+    }
+  }
 }
