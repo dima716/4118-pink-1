@@ -1,0 +1,7 @@
+.input-group {
+  display: flex;
+
+  @mixin tablet {
+    margin-bottom: 12px;
+  }
+}

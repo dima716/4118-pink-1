@@ -1,30 +1,196 @@
 .form {
   &__intro {
+    width: 280px;
+    margin: 0 auto;
     padding-top: 44px;
     padding-bottom: 80px;
     text-align: center;
     line-height: 30px;
+
+    @mixin tablet {
+      width: 495px;
+      font-size: 18px;
+      padding-top: 94px;
+      padding-bottom: 74px;
+    }
+
+    @mixin desktop {
+      width: 760px;
+      padding-top: 100px;
+      padding-bottom: 80px;
+    }
+
+    & > span {
+      display: none;
+
+      @mixin tablet {
+        display: inline;
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+
+    @mixin desktop {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__list-container {
+    display: flex;
+    flex-direction: column;
+
+    @mixin desktop {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      width: 1200px;
+      padding: 0 130px;
+      margin: 0 auto;
+    }
+  }
+
+  &__item {
+    @mixin tablet {
+      margin-bottom: 52px;
+    }
+
+    @mixin desktop {
+      & > .container {
+        width: auto;
+        padding: 0;
+      }
+    }
+  }
+
+  &__fieldset {
+    border: none;
+    margin: 0;
+    padding: 0;
+
+    @mixin tablet {
+      border: 2px solid #e5e5e5;
+      padding-top: 45px;
+      padding-bottom: 54px;
+      padding-left: 57px;
+      padding-right: 57px;
+    }
+  }
+
+  &__fieldset--person-contacts {
+    @mixin tablet {
+      padding-bottom: 33px;
+    }
+
+    @mixin desktop {
+      padding-left: 57px;
+      padding-bottom: 12px;
+      padding-top: 32px;
+    }
+  }
+
+  &__fieldset--person-emotions {
+    @mixin tablet {
+      padding-top: 35px;
+      padding-bottom: 51px;
+    }
+  }
+
+  &__fieldset--person-travel-app {
+    @mixin desktop {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  &__group--person-contacts {
+    @mixin desktop {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__group--person-achievements {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    @mixin desktop {
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  &__part {
+    @mixin tablet {
+      margin-bottom: 43px;
+    }
+
+    @mixin desktop {
+      margin-bottom: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
   &__row {
-    margin-bottom: 52px;
     position: relative;
+
+    @mixin tablet {
+      display: flex;
+      align-items: center;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
   }
 
-  &__person-achievements {
-    padding-top: 40px;
-    border-bottom: 1px solid transparent;
-    background-color: #f2f2f2;
+  &__row--person-contacts {
+    margin-bottom: 50px;
+
+    @mixin tablet {
+      flex-direction: column;
+      align-items: stretch;
+      margin-bottom: 28px;
+
+      .label-text {
+        order: 1;
+        margin-left: 20px;
+      }
+    }
+
+    @mixin desktop {
+      width: 375px;
+      margin-bottom: 0;
+    }
   }
 
-  &__person-travel-app {
-    padding-top: 39px;
-    border-bottom: 1px solid transparent;
-    background-color: #f2f2f2;
+  &__row--person-travel-app {
+    margin-bottom: 38px;
+
+    @mixin desktop {
+      margin-left: 75px;
+    }
   }
 
-  &__person-contacts {
-    padding-top: 67px;
+  &__row--person-achievements {
+    margin-bottom: 43px;
+  }
+
+  &__row--person-info {
+    margin-bottom: 52px;
+
+    @mixin tablet {
+      margin-bottom: 50px;
+    }
   }
 
   &__title {
@@ -35,11 +201,105 @@
     line-height: 18px;
     font-weight: normal;
     text-transform: uppercase;
+
+    @mixin tablet {
+      margin-bottom: 0;
+      padding: 0 32px;
+
+      & > br {
+        display: none;
+      }
+    }
+  }
+
+  &__title--person-contacts {
+    display: none;
+
+    @mixin tablet {
+      display: block;
+    }
+  }
+
+  &__person-info {
+    @mixin tablet {
+      order: -1;
+    }
+
+    @mixin desktop {
+      width: 435px;
+    }
+  }
+
+  &__person-achievements {
+    padding-top: 40px;
+    border-bottom: 1px solid transparent;
+    background-color: #f2f2f2;
+
+    @mixin tablet {
+      padding-top: 0;
+      order: 2;
+      background-color: #fff;
+    }
+
+    @mixin desktop {
+      width: 100%;
+    }
+  }
+
+  &__person-contacts {
+    padding-top: 66px;
+
+    @mixin tablet {
+      padding-top: 0;
+      order: 1;
+    }
+
+    @mixin desktop {
+      width: 100%;
+    }
+  }
+
+  &__person-travel-app {
+    border-bottom: 1px solid transparent;
+    background-color: #f2f2f2;
+    padding-top: 40px;
+
+    @mixin tablet {
+      padding-top: 0;
+      order: 0;
+      background-color: #fff;
+    }
+
+    @mixin desktop {
+      width: 435px;
+    }
   }
 
   &__person-emotions {
-    padding-top: 36px;
-    padding-bottom: 36px;
+    padding-top: 40px;
+
+    @mixin tablet {
+      padding-top: 0;
+      order: 3;
+      margin-bottom: 66px;
+    }
+
+    @mixin desktop {
+      width: 100%;
+    }
+  }
+
+  &__actions {
+    margin-bottom: 58px;
+
+    @mixin tablet {
+      order: 4;
+      margin-bottom: 86px;
+    }
+
+    @mixin desktop {
+      width: 100%;
+    }
   }
 
   &__text-area {
@@ -57,10 +317,25 @@
       font-size: 18px;
       color: #283645;
     }
+
+    @mixin tablet {
+      margin-bottom: 0;
+      min-height: 194px;
+    }
   }
 
   &__person-emotions-title {
     margin-bottom: 20px;
+
+    @mixin tablet {
+      margin-bottom: 0;
+    }
+  }
+
+  &__actions-inner {
+    @mixin tablet {
+      display: flex;
+    }
   }
 
   &__submit {
@@ -85,14 +360,31 @@
     &:active {
       color: color(#fff a(30%));
     }
+
+    @mixin tablet {
+      width: 300px;
+      margin-bottom: 0;
+    }
   }
 
   &__sign {
     text-align: center;
     text-transform: uppercase;
 
-    & > span {
-      color: #d22856
+    @mixin tablet {
+      margin-left: auto;
+    }
+  }
+
+  &__sign-asterisk {
+    color: #d22856;
+  }
+
+  &__sign-fill {
+    display: none;
+
+    @mixin desktop {
+      display: inline;
     }
   }
 }
