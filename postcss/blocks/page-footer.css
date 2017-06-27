@@ -1,55 +1,89 @@
 .page-footer {
   display: flex;
+  box-sizing: content-box;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  min-height: 241px;
-  padding-bottom: 36px;
+  min-height: 205px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
 
-  @mixin tablet {
+.page-footer__logo-container:hover .page-footer__logo-name path,
+.page-footer__logo-container:hover .page-footer__logo-glasses path {
+  fill: #d22856;
+}
+
+.page-footer__logo-container:hover .page-footer__logo-stars path,
+.page-footer__logo-container:active .page-footer__logo-name path {
+  fill: #283645;
+}
+
+.page-footer__logo-container:active {
+  opacity: .3;
+}
+
+.page-footer__logo-container--desktop {
+  display: none;
+}
+
+.page-footer__logo {
+  width: 147px;
+  height: 40px;
+}
+
+.page-footer__developed-by {
+  display: flex;
+  align-items: center;
+}
+
+.page-footer__developed-by-logo {
+  margin-left: 15px;
+  font-size: 0;
+
+  & > svg > path {
+    fill: #d22856
+  }
+}
+
+.page-footer__developed-by-logo:hover {
+  & > svg > path {
+    fill: #283645;
+  }
+}
+
+.page-footer__developed-by-logo:active {
+  opacity: 0.3;
+}
+
+@mixin tablet {
+  .page-footer {
+    box-sizing: border-box;
     flex-direction: row;
     min-height: auto;
-    justify-content: space-around;
+    justify-content: space-between;
+  }
+}
+
+@mixin desktop {
+  .page-footer {
+    padding-top: 70px;
+    padding-bottom: 70px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 
-  &__logo {
-    width: 147px;
-    height: 40px;
+  .page-footer__logo-container--tablet {
+    display: none;
   }
 
-  &__logo:hover > svg > g > path {
-    fill: #d22856;
+  .page-footer__logo-container--desktop {
+    display: inline;
   }
 
-  &__logo:active {
-    opacity: 0.3;
-
-    & > svg > g > path {
-      fill: initial;
-    }
-  }
-
-  &__developed-by {
-    display: flex;
-    align-items: center;
-  }
-
-  &__developed-by-logo {
-    margin-left: 15px;
-    font-size: 0;
-
-    & > svg > path {
-      fill: #d22856
-    }
-  }
-
-  &__developed-by-logo:hover {
-    & > svg > path {
-      fill: #283645;
-    }
-  }
-
-  &__developed-by-logo:active {
-    opacity: 0.3;
+  .page-footer__developed-by {
+    font-size: 18px;
   }
 }

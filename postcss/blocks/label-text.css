@@ -5,8 +5,10 @@
   color: #d22856;
   text-transform: uppercase;
   line-height: 30px;
+}
 
-  @mixin tablet {
+@mixin tablet {
+  .label-text {
     position: static;
     margin-right: 19px;
   }

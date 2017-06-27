@@ -3,50 +3,73 @@
   min-height: 237px;
   justify-content: center;
   align-items: center;
-  background-image: url(../img/bg-back-mobile@1x.jpg);
-  background-repeat: no-repeat;
-  background-position: top center;
+  background-image: url(../img/iphone-hand-mobile@1x.png), url(../img/bg-back-mobile@1x.jpg);
+  background-repeat: no-repeat, no-repeat;
   background-color: #1d2631;
+  background-size: 258px, 698px;
+  background-position: left 174px, center top;
 
-  @mixin tablet {
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    background-image: url(../img/iphone-hand-mobile@2x.png), url(../img/bg-back-mobile@2x.jpg);
+  }
+
+  @media (min-width: 660px) and (min-resolution: 144dpi),
+  (min-width: 660px) and (min-resolution: 1.5dppx) {
+    background-image: url(../img/iphone-hand-tablet@2x.png), url(../img/bg-back-tablet@2x.jpg);
+  }
+
+  @media (min-width: 960px) and (min-resolution: 144dpi),
+  (min-width: 960px) and (min-resolution: 1.5dppx) {
+    background-image: url(../img/iphone-hand-desktop@2x.png), url(../img/bg-back-desktop@2x.jpg);
+  }
+}
+
+.intro__container {
+  padding-top: 462px;
+}
+
+.intro__img {
+  position: absolute;
+  top: 176px;
+  left: 0;
+  font-size: 0;
+}
+
+.intro__title {
+  color: #fff;
+  align-self: center;
+  text-align: center;
+  margin: 0;
+  font-weight: 100;
+}
+
+@mixin tablet {
+  .intro {
+    background-image: url(../img/iphone-hand-tablet@1x.png), url(../img/bg-back-tablet@1x.jpg);
+    background-position: center bottom, center top;
+    background-size: 700px, cover;
     min-height: 440px;
   }
 
-  &__container {
-    padding-top: 462px;
-
-    @mixin tablet {
-      display: flex;
-      padding-top: 0;
-    }
+  .intro__container {
+    padding-top: 0;
   }
 
-  @mixin tablet {
-    background-size: cover;
+  .intro__img {
+    position: static;
+    order: 1;
+    align-self: flex-end;
   }
 
-  &__img {
-    position: absolute;
-    top: 176px;
-    left: 0;
-    font-size: 0;
-
-    @mixin tablet {
-      position: static;
-      order: 1;
-      align-self: flex-end;
-    }
+  .intro__title {
+    font-size: 50px;
   }
+}
 
-  &__title {
-    color: #fff;
-    align-self: center;
-    text-align: center;
-    margin: 0;
-    font-weight: lighter;
-
-    @mixin tablet {
-      font-size: 50px;
-    }
+@mixin desktop {
+  .intro {
+    background-image: url(../img/iphone-hand-desktop@1x.png), url(../img/bg-back-desktop@1x.jpg);
+    background-size: 1075px, cover;
+    background-position: left bottom,center top;
   }
 }

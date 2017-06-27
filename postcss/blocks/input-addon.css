@@ -7,16 +7,20 @@
   background-color: #e5e5e5;
   background-repeat: no-repeat;
   background-position: center center;
-
-  @mixin tablet {
-    display: block;
-  }
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
 }
 
 .input-addon--phone {
-  background-image: url(../img/icon-phone.png);
+  background-image: url(../img/icon-phone.svg);
 }
 
 .input-addon--email {
-  background-image: url(../img/icon-mail.png);
+  background-image: url(../img/icon-mail.svg);
+}
+
+@mixin tablet {
+  .input-addon {
+    display: block;
+  }
 }

@@ -1,4 +1,4 @@
-.form-page__intro {
+.photos-page__intro {
   background-image: none, url(../img/bg-back-mobile@1x.jpg);
 
   @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
@@ -8,36 +8,28 @@
   @media (min-width: 660px) and (min-resolution: 144dpi),
   (min-width: 660px) and (min-resolution: 1.5dppx) {
     background-image: none, url(../img/bg-back-tablet@2x.jpg);
-    background-size: 1165px 665px;
+    background-size: 1200px 680px;
   }
 
   @media (min-width: 960px) and (min-resolution: 144dpi),
   (min-width: 960px) and (min-resolution: 1.5dppx) {
     background-image: none, url(../img/bg-back-desktop@2x.jpg);
-    background-size: 2650px 925px;
+    background-size: 2530px;
   }
-}
-
-.form-page__title {
-  margin-top: 35px;
-}
-
-.form-page__page-footer {
-  padding-top: 56px;
 }
 
 @mixin tablet {
-  .form-page__intro {
+  .photos-page__intro {
     background-image: none, url(../img/bg-back-tablet@1x.jpg);
-  }
-
-  .form-page__page-footer {
-    padding-top: 70px;
   }
 }
 
 @mixin desktop {
-  .form-page__intro {
+  .photos-page__intro {
     background-image: none, url(../img/bg-back-desktop@1x.jpg);
+  }
+
+  .photos-page__page-footer {
+    padding-top: 98px;
   }
 }

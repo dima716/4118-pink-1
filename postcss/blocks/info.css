@@ -1,244 +1,286 @@
 .info {
   text-align: center;
+}
 
-  &__container {
-    @mixin tablet {
-      display: flex;
-      justify-content: space-around;
+.info__offer {
+  padding-top: 43px;
+  padding-bottom: 32px;
+
+  & > p {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 100;
+  }
+
+  & > p:first-child {
+    margin-bottom: 34px;
+  }
+
+  & > p > br {
+    display: none;
+  }
+}
+
+.info__advantages {
+  background-color: #f2f2f2;
+  margin-top: 32px;
+  padding-top: 49px;
+  position: relative;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    display: block;
+    height: 100%;
+    transform-origin: left top;
+    transform: skewY(-5deg);
+    background-color: inherit;
+    width: 100%;
+    z-index: -1;
+  }
+}
+
+.info__advantages-list {
+  @mixin reset-ul;
+  padding-bottom: 325px;
+  background-image: url(../img/iphone-screen-mobile@1x.png);
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: center 448px;
+
+  @media (min-width: 320px) and (min-resolution: 144dpi),
+  (min-width: 320px) and (min-resolution: 1.5dppx) {
+    background-image: url(../img/iphone-screen-mobile@2x.png);
+    background-size: 157px, 320px;
+  }
+}
+
+.info__advantages-item {
+  @media (min-width: 960px) and (min-resolution: 144dpi),
+  (min-width: 960px) and (min-resolution: 1.5dppx) {
+    &:before {
+      background-size: 292px 302px;
     }
 
-    @mixin desktop {
-      flex-direction: column;
+    &:nth-child(1):before {
+      background-image: url(../img/iphone-screen-1-desktop@2x.png);
+    }
+
+    &:nth-child(2):before {
+      background-image: url(../img/iphone-screen-2-desktop@2x.png);
+    }
+
+    &:nth-child(3):before {
+      background-image: url(../img/iphone-screen-3-desktop@2x.png);
     }
   }
 
-  &__offer {
-    padding-top: 43px;
-    padding-bottom: 32px;
+  & > b {
+    display: block;
+    font-size: 18px;
+    line-height: 18px;
+  }
 
-    @mixin tablet {
-      padding-bottom: 69px;
-    }
+  & > p {
+    margin-top: 20px;
+    margin-bottom: 35px;
+    font-size: 14px;
+    line-height: 24px;
+  }
 
-    @mixin desktop {
-      padding-top: 74px;
-      padding-bottom: 145px;
-    }
+  &:last-child > p {
+    margin-bottom: 0;
+  }
+}
+
+.info__effect-container {
+  display: none;
+  position: relative;
+  padding-top: 100px;
+  padding-bottom: 86px;
+  padding-left: 330px;
+  text-align: left;
+  background-repeat: no-repeat;
+
+  &:before {
+    content: '24';
+    background-image: url(../img/icon-editor-diagram-fill.svg), url(../img/icon-timer.svg);
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 20px;
+    top: 0;
+    text-align: center;
+    color: #d22856;
+    font-weight: 700;
+  }
+}
+
+.info__effect-title {
+  font-size: 30px;
+  line-height: 36px;
+  color: #000;
+  margin-bottom: 17px;
+  margin-top: 0;
+}
+
+.info__effect-text {
+  line-height: 24px;
+}
+
+.info__effect-more-link {
+  color: #d22856;
+}
+
+@mixin tablet {
+  .info__offer {
+    padding-bottom: 69px;
 
     & > p {
-      margin: 0;
-      font-size: 24px;
-      font-weight: lighter;
-
-      & > br {
-        display: none;
-      }
-
-      @mixin tablet {
-        font-size: 40px;
-        text-align: center;
-
-        & > br {
-          display: inline;
-        }
-      }
-
-      @mixin desktop {
-        font-size: 50px;
-      }
+      font-size: 40px;
+      text-align: center;
     }
 
     & > p:first-child {
-      margin-bottom: 34px;
+      margin-bottom: 0;
+    }
 
-      @mixin tablet {
-        margin-bottom: 0;
-      }
+    & > p > br {
+      display: inline;
     }
   }
 
-  &__advantages {
-    background-color: #f2f2f2;
-    margin-top: 32px;
-    padding-top: 49px;
-    position: relative;
+  .info__advantages {
+    padding-top: 30px;
+  }
 
-    @mixin tablet {
-      padding-top: 30px;
+  .info__advantages-list {
+    margin-top: -85px;
+    padding-left: 310px;
+    padding-top: 70px;
+    padding-bottom: 35px;
+    background-image: url(../img/iphone-screen-3-tablet@1x.png);
+    position: relative;
+    background-position: left bottom;
+    text-align: left;
+
+    @media (min-width: 660px) and (min-resolution: 144dpi),
+    (min-width: 660px) and (min-resolution: 1.5dppx) {
+      background-image: url(../img/iphone-screen-3-tablet@2x.png);
+      background-size: 268px, 481px;
     }
+  }
+
+  .info__effect-container {
+    display: block;
+
+    &:before {
+      top: 59px;
+      width: 239px;
+      height: 277px;
+      font-size: 96px;
+      line-height: 310px;
+      background-position: center 56px, center center;
+      background-size: 203px, cover;
+    }
+  }
+}
+
+@mixin desktop {
+  .info__offer {
+    padding-top: 74px;
+    padding-bottom: 145px;
+
+    & > p {
+      font-size: 50px;
+    }
+  }
+
+  .info__advantages-list {
+    display: flex;
+    padding: 0;
+    background: none;
+    justify-content: space-around;
+    margin-top: -118px;
+    padding-bottom: 67px;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    background-image: none;
+  }
+
+  .info__advantages-item {
+    text-align: center;
+    flex-basis: 240px;
 
     &:before {
       content: '';
-      position: absolute;
-      top: 0px;
+      padding-top: 362px;
       display: block;
-      height: 100%;
-      transform-origin: left top;
-      transform: skewY(-5deg);
-      background-color: inherit;
-      width: 100%;
-      z-index: -1;
-    }
-  }
-
-  &__advantages-list {
-    @mixin reset-ul;
-
-    @mixin tablet {
-      order: 1;
-      text-align: left;
-      width: 320px;
+      background-repeat: no-repeat;
+      background-position: center top;
     }
 
-    @mixin desktop {
-      display: flex;
-      justify-content: space-around;
-      width: 100%;
-      padding-top: 60px;
-      position: relative;
-      z-index: 1;
-      background-color: #f2f2f2;
+    &:nth-child(1):before {
+      background-image: url(../img/iphone-screen-1-desktop@1x.png);
     }
-  }
 
-  &__advantages-item {
-    @mixin desktop {
-      text-align: center;
-      flex-basis: 245px;
+    &:nth-child(2):before {
+      background-image: url(../img/iphone-screen-2-desktop@1x.png);
+    }
+
+    &:nth-child(3):before {
+      background-image: url(../img/iphone-screen-3-desktop@1x.png);
     }
 
     & > b {
-      display: block;
-      font-size: 18px;
-      line-height: 18px;
-
-      @mixin desktop {
-        font-size: 30px;
-        line-height: 30px;
-      }
+      font-size: 30px;
+      line-height: 30px;
     }
 
     & > p {
-      margin-top: 20px;
-      margin-bottom: 35px;
-      font-size: 14px;
-      line-height: 24px;
-
-      @mixin desktop {
-        font-size: 18px;
-        line-height: 30px;
-      }
-    }
-  }
-
-  &__advantages-images {
-    @mixin desktop {
-      display: flex;
-      justify-content: space-around;
-      position: relative;
-      margin-top: -193px;
-      z-index: 0;
-      top: 66px;
-    }
-  }
-
-  &__advantages-img {
-    overflow: hidden;
-
-    @mixin desktop {
-      overflow: visible;
-    }
-
-    &:after {
-      @mixin desktop {
-        content: '';
-        height: 0;
-        width: 150%;
-        margin-left: -25%;
-        display: block;
-        box-shadow: 0 -65px 10px 1px #000;
-      }
-    }
-
-    & > img {
-      position: relative;
-      top: 45px;
-
-      @mixin tablet {
-        top: 0;
-      }
-    }
-  }
-
-  &__advantages-img:nth-child(1),
-  &__advantages-img:nth-child(2) {
-    display: none;
-
-    @mixin desktop {
-      display: block;
-    }
-  }
-
-  &__effect {
-    @mixin desktop {
-      background-color: #f2f2f2;
-    }
-  }
-
-  &__effect-container {
-    display: none;
-    padding-top: 100px;
-    padding-bottom: 86px;
-    padding-left: 310px;
-    text-align: left;
-    background-image: url(../img/bg-timer.png);
-    background-repeat: no-repeat;
-    background-position: 20px 60px;
-
-    @mixin tablet {
-      display: block;
-    }
-
-    @mixin desktop {
-      padding-left: 500px;
-      background-position: 130px center
-    }
-  }
-
-  &__effect-title {
-    font-size: 30px;
-    line-height: 36px;
-    color: #000;
-    margin-bottom: 17px;
-    margin-top: 0;
-
-    @mixin desktop {
-      line-height: 30px;
-      margin-bottom: 24px;
-    }
-
-    & > br {
-      @mixin desktop {
-        display: none;
-      }
-    }
-  }
-
-  &__effect-text {
-    line-height: 24px;
-
-    @mixin desktop {
       font-size: 18px;
       line-height: 30px;
-      margin-bottom: 30px;
+      margin-bottom: 0;
     }
   }
 
-  &__effect-more-link {
-    color: #d22856;
+  .info__effect {
+    background-color: #f2f2f2;
+  }
 
-    @mixin desktop {
-      font-size: 18px;
+  .info__effect-container {
+    padding-left: 380px;
+    padding-bottom: 112px;
+
+    &:before {
+      top: 0;
+      left: 10px;
+      background-size: 252px, cover;
+      background-position: center 72px, center center;
+      width: 300px;
+      height: 350px;
+      line-height: 385px;
+      font-size: 120px;
     }
+  }
+
+  .info__effect-title {
+    line-height: 30px;
+    margin-bottom: 24px;
+  }
+
+  .info__effect-title > br {
+    display: none;
+  }
+
+  .info__effect-text {
+    font-size: 18px;
+    line-height: 30px;
+    margin-bottom: 30px;
+  }
+
+  .info__effect-more-link {
+    font-size: 18px;
   }
 }
