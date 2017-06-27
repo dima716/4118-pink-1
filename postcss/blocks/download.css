@@ -1,118 +1,123 @@
 .download {
-  background-color: #1d2631;
-  padding-top: 28px;
-  padding-bottom: 32px;
+  padding-top: 15px;
+  padding-bottom: 30px;
+}
 
-  @mixin tablet {
+.download__text {
+  display: none;
+  color: #fff;
+  font-size: 40px;
+  font-weight: 100;
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.download__links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 32px;
+}
+
+.download__link {
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+  background-repeat: no-repeat;
+  margin-right: 37px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.download__link--apple {
+  width: 46px;
+  height: 57px;
+  background-image: url(../img/logo-apple.svg);
+}
+
+.download__link--android {
+  width: 42px;
+  height: 47px;
+  background-image: url(../img/logo-android.svg);
+}
+
+.download__link--windows-phone {
+  width: 44px;
+  height: 42px;
+  background-image: url(../img/logo-microsoft.svg);
+}
+
+.download__description {
+  margin-top: 22px;
+  margin-bottom: 0;
+  text-align: center;
+  line-height: 24px;
+  font-weight: 100;
+  color: #fff;
+}
+
+.download__btn {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  border: 3px solid #fff;
+  border-radius: 25px;
+  text-align: center;
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 700;
+  transition: all .25s;
+
+  &:hover,
+  &:active  {
+    background-color: #fff;
+    color: #d22856;
+  }
+
+  &:active {
+    color: color(#d22856 a(30%));
+  }
+}
+
+@mixin tablet {
+  .download {
     width: 300px;
     padding-bottom: 110px;
     background-color: transparent;
     order: 0;
   }
 
-  @mixin desktop {
-    padding-top: 40px;
+  .download__text {
+    display: block;
+  }
+
+  .download__description {
+    font-size: 18px;
+    margin-top: 37px;
+  }
+}
+
+@mixin desktop {
+  .download {
+    width: 310px;
+    padding-top: 23px;
     padding-bottom: 123px;
   }
 
-  @mixin desktop {
-    width: 310px;
+  .download__text {
+    font-size: 50px;
+    margin-bottom: 60px;
   }
 
-  &__text {
-    display: none;
-    color: #fff;
-    font-size: 40px;
-    font-weight: lighter;
-    text-align: center;
-    margin-bottom: 35px;
-
-    @mixin tablet {
-      display: block;
-    }
-
-    @mixin desktop {
-      font-size: 50px;
-      margin-bottom: 60px;
-    }
+  .download__links {
+    margin-top: 65px;
   }
 
-  &__links {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-top: 32px;
-
-    @mixin desktop {
-      margin-top: 65px;
-    }
-  }
-
-  &__link {
-    overflow: hidden;
-    text-indent: 100%;
-    white-space: nowrap;
-    background-repeat: no-repeat;
-  }
-
-  &__link--apple {
-    width: 46px;
-    height: 57px;
-    background-image: url(../img/logo-apple.svg);
-  }
-
-  &__link--android {
-    width: 42px;
-    height: 47px;
-    background-image: url(../img/logo-android.svg);
-  }
-
-  &__link--windows-phone {
-    width: 44px;
-    height: 42px;
-    background-image: url(../img/logo-microsoft.svg);
-  }
-
-  &__description {
-    margin-top: 22px;
-    margin-bottom: 0;
-    text-align: center;
-    line-height: 24px;
-    color: #fff;
-    font-weight: lighter;
-
-    @mixin tablet {
-      margin-top: 37px;
-    }
-
-    @mixin desktop {
-      margin-top: 57px;
-      font-size: 18px;
-    }
-  }
-
-  &__btn {
-    padding-top: 16px;
-    padding-bottom: 16px;
-    display: block;
-    text-decoration: none;
-    color: #fff;
-    border: 3px solid #fff;
-    border-radius: 25px;
-    text-align: center;
-    font-size: 18px;
-    line-height: 18px;
-    font-weight: bold;
-    transition: all .25s;
-
-    &:hover,
-    &:active  {
-      background-color: #fff;
-      color: #d22856;
-    }
-
-    &:active {
-      color: color(#d22856 a(30%));
-    }
+  .download__description {
+    margin-top: 57px;
   }
 }

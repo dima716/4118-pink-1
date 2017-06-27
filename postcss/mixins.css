@@ -1,3 +1,9 @@
+@define-mixin retina {
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    @mixin-content;
+  }
+}
+
 @define-mixin only-mobile {
   @media (max-width: $only-mobile-widths) {
     @mixin-content;
@@ -27,7 +33,7 @@
 
   @mixin desktop {
     width: $desktop-widths;
-    padding: 0 120px;
+    padding: 0 10px;
   }
 }
 

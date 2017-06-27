@@ -1,8 +1,36 @@
-.photos-page {
-  &__page-footer {
-    @mixin desktop {
-      padding-top: 98px;
-    }
+.photos-page__intro {
+  background-image: none, url(../img/bg-back-mobile@1x.jpg);
+
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    background-image: none, url(../img/bg-back-mobile@2x.jpg);
+  }
+
+  @media (min-width: 660px) and (min-resolution: 144dpi),
+  (min-width: 660px) and (min-resolution: 1.5dppx) {
+    background-image: none, url(../img/bg-back-tablet@2x.jpg);
+    background-size: 1200px 680px;
+  }
+
+  @media (min-width: 960px) and (min-resolution: 144dpi),
+  (min-width: 960px) and (min-resolution: 1.5dppx) {
+    background-image: none, url(../img/bg-back-desktop@2x.jpg);
+    background-size: 2530px;
+  }
+}
+
+@mixin tablet {
+  .photos-page__intro {
+    background-image: none, url(../img/bg-back-tablet@1x.jpg);
+  }
+}
+
+@mixin desktop {
+  .photos-page__intro {
+    background-image: none, url(../img/bg-back-desktop@1x.jpg);
+  }
+
+  .photos-page__page-footer {
+    padding-top: 98px;
   }
 }
 

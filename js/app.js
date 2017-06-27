@@ -1,5 +1,30 @@
 (function(global) {
   'use strict';
+  var geocoder, map, reviewSlider, pricesSlider, toggleMenu, mainNav;
+
+  function initMap() {
+    geocoder = new google.maps.Geocoder();
+
+    geocoder.geocode({
+      'address': 'г. Санкт-Петербург, ул.Большая Конюшенная, д. 19/8'
+    }, function(results, status) {
+      if (status == google.maps.GeocoderStatus.OK) {
+        map = new google.maps.Map(document.getElementsByClassName('contacts__map')[0], {
+          center: results[0].geometry.location,
+          zoom: 16,
+          scrollwheel: false
+        });
+
+        var image = 'img/icon-map-marker.svg';
+
+        var placeMarker = new google.maps.Marker({
+          position: results[0].geometry.location,
+          map: map,
+          icon: image
+        });
+      }
+    });
+  }
 
   function Slider(options) {
     this.activePaginatorItemClass = options.activePaginatorItemClass;
@@ -86,16 +111,33 @@
     }
   };
 
-  var reviewSlider = new Slider({
-    selector: '.reviews__list',
-    activePaginatorItemClass: 'reviews__pagination-item--active'
+  toggleMenu = document.getElementsByClassName('main-nav__toggler')[0];
+  mainNav = document.getElementsByClassName('main-nav')[0];
+
+  toggleMenu.addEventListener('click', function () {
+    if ( mainNav.classList.contains('main-nav--open') ) {
+      mainNav.classList.remove('main-nav--open');
+    } else {
+      mainNav.classList.add('main-nav--open');
+    }
   });
 
-  var pricesSlider = new Slider({
-    selector: '.prices__list',
-    activePaginatorItemClass: 'prices__pagination-item--active'
-  });
+  if (document.getElementsByClassName('contacts__map')[0]) {
+    global.initMap = initMap;
+  }
 
-  reviewSlider.init();
-  pricesSlider.init();
+  if (document.getElementsByClassName('reviews__list')[0] && document.getElementsByClassName('prices__list')[0]) {
+    reviewSlider = new Slider({
+      selector: '.reviews__list',
+      activePaginatorItemClass: 'reviews__pagination-item--active'
+    });
+
+    pricesSlider = new Slider({
+      selector: '.prices__list',
+      activePaginatorItemClass: 'prices__pagination-item--active'
+    });
+
+    reviewSlider.init();
+    pricesSlider.init();
+  }
 })(window);

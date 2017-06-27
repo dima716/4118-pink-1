@@ -1,17 +1,14 @@
-.index-page {
-  &__intro {
-    @mixin tablet {
-      padding-top: 184px;
-      min-height: auto;
-      flex-direction: row;
-    }
+.index-page__page-footer {
+  display: none;
+}
+
+@mixin tablet {
+  .index-page__intro {
+    padding-top: 184px;
+    min-height: auto;
   }
 
-  &__page-footer {
-    display: none;
-
-    @mixin tablet {
-      display: flex;
-    }
+  .index-page__page-footer {
+    display: flex;
   }
 }

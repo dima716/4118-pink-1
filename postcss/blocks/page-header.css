@@ -1,5 +1,42 @@
-.page-header {
-  &__title {
+.page-header__title {
+  display: none;
+}
+
+.page-header__logo-container:hover .page-header__logo-name path,
+.page-header__logo-container:hover .page-header__logo-glasses path {
+  fill: #d22856;
+}
+
+.page-header__logo-container:hover .page-header__logo-stars path {
+  fill: #fff;
+}
+
+.page-header__logo-container:active {
+  opacity: .3;
+}
+
+.page-header__logo-container--tablet,
+.page-header__logo-container--desktop {
+  display: none;
+}
+
+@mixin tablet {
+  .page-header__logo-container--mobile,
+  .page-header__logo-container--desktop {
     display: none;
+  }
+
+  .page-header__logo-container--tablet {
+    display: inline;
+  }
+}
+
+@mixin desktop {
+  .page-header__logo-container--tablet {
+    display: none;
+  }
+
+  .page-header__logo-container--desktop {
+    display: inline;
   }
 }

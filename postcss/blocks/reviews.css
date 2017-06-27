@@ -1,168 +1,187 @@
 .reviews {
   padding-top: 44px;
   padding-bottom: 70px;
+}
 
-  @mixin desktop {
+.reviews__list {
+  width: 280px;
+  margin: 0 auto;
+}
+
+.reviews__item {
+  display: none;
+  flex-direction: column;
+}
+
+.reviews__item-author {
+  display: block;
+  margin-bottom: 11px;
+  text-align: center;
+  font-size: 18px;
+  color: #000;
+  line-height: 30px;
+  font-weight: 700;
+}
+
+.reviews__item-author-info {
+  display: none;
+  order: 3;
+  text-align: center;
+  font-size: 14px;
+  line-height: 30px;
+}
+
+.reviews__item-text {
+  margin: 0;
+  text-align: center;
+  font-size: 14px;
+  line-height: 30px;
+}
+
+.reviews__inner {
+  display: flex;
+  margin-bottom: 32px;
+}
+
+.reviews__pagination {
+  display: flex;
+  justify-content: center;
+}
+
+.reviews__pagination-item {
+  width: 12px;
+  height: 12px;
+  margin-right: 13px;
+  cursor: pointer;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  background-color: #bec2c7;
+
+  &:not(&--active):hover {
+    background-color: #7e868f;
+  }
+
+  &:not(&--active):active {
+    background-color: #e9ebec;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.reviews__pagination-item--active {
+  border-color: #283645;
+  background-color: #fff;
+}
+
+.reviews__control {
+  display: none;
+  position: absolute;
+  font-size: 85px;
+  top: 20px;
+  width: 22px;
+  height: 42px;
+  border: none;
+  background-color: initial;
+  background-repeat: no-repeat;
+  outline: none;
+  cursor: pointer;
+
+  & > svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  & > svg > path {
+    fill: #bec2c7;
+  }
+
+  &:hover > svg > path {
+    fill: #868e97
+  }
+
+  &:active > svg {
+    opacity: .3;
+  }
+}
+
+.reviews__control--previous {
+  left: 0;
+}
+
+.reviews__control--next {
+  right: 0;
+}
+
+@mixin tablet {
+  .reviews__list {
+    width: auto;
+  }
+
+  .reviews__item-author {
+    order: 1;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .reviews__item-author-info {
+    display: block;
+  }
+
+  .reviews__item-text {
+    order: 0;
+    font-size: 18px;
+    line-height: 30px;
+    margin-bottom: 40px;
+  }
+}
+
+@mixin desktop {
+  .reviews {
     padding-top: 186px;
     position: relative;
-    padding-bottom: 109px;
+    padding-bottom: 124px;
   }
 
-  &:before {
-    @mixin desktop {
-      content: '';
-      width: 79px;
-      height: 63px;
-      position: absolute;
-      background-image: url(../img/quotes.png);
-      top: 73px;
-      left: 50%;
-      margin-left: -40px;
-    }
-  }
-
-  &__list {
-    width: 280px;
-    margin: 0 auto;
-
-    @mixin tablet {
-      width: auto;
-    }
-
-    @mixin desktop {
-      position: relative;
-    }
-  }
-
-  &__item {
-    display: none;
-    flex-direction: column;
-  }
-
-  &__item-author {
-    display: block;
-    margin-bottom: 11px;
-    text-align: center;
-    font-size: 18px;
-    color: #000;
-    line-height: 30px;
-    font-weight: bold;
-
-    @mixin tablet {
-      order: 1;
-      font-size: 20px;
-      line-height: 30px;
-    }
-
-    @mixin desktop {
-      font-size: 24px;
-    }
-  }
-
-  &__item-author-info {
-    display: none;
-    order: 3;
-    text-align: center;
-    font-size: 14px;
-    line-height: 30px;
-
-    @mixin tablet {
-      display: block;
-    }
-
-    @mixin desktop {
-      font-size: 18px;
-    }
-  }
-
-  &__item-text {
-    margin: 0;
-    text-align: center;
-    font-size: 14px;
-    line-height: 30px;
-
-    @mixin tablet {
-      order: 0;
-      font-size: 18px;
-      line-height: 30px;
-      margin-bottom: 40px;
-    }
-
-    @mixin desktop {
-      width: 680px;
-    }
-  }
-
-  &__inner {
-    display: flex;
-    margin-bottom: 32px;
-
-    @mixin desktop {
-      justify-content: center;
-    }
-  }
-
-  &__pagination {
-    display: flex;
-    justify-content: center;
-
-    @mixin desktop {
-      display: none;
-    }
-  }
-
-  &__pagination-item {
-    width: 12px;
-    height: 12px;
-    margin-right: 13px;
-    cursor: pointer;
-    border: 3px solid #fff;
-    border-radius: 50%;
-    background-color: #bec2c7;
-
-    &:not(&--active):hover {
-      background-color: #7e868f;
-    }
-
-    &:not(&--active):active {
-      background-color: #e9ebec;
-    }
-
-    &:last-child {
-      margin-right: 0;
-    }
-  }
-
-  &__pagination-item--active {
-    border-color: #283645;
-    background-color: #fff;
-  }
-
-  &__control {
-    display: none;
+  .reviews:before {
+    content: '';
+    width: 79px;
+    height: 63px;
     position: absolute;
-    font-size: 85px;
-    top: 20px;
-    width: 22px;
-    height: 41px;
-    border: none;
-    background-color: initial;
-    background-repeat: no-repeat;
-    outline: none;
-    cursor: pointer;
-
-    @mixin desktop {
-      display: block;
-    }
+    background-image: url(../img/icon-quotes.svg);
+    top: 73px;
+    left: 50%;
+    margin-left: -40px;
   }
 
-  &__control--previous {
-    left: 0;
-    background-image: url(../img/left-arrow.png);
+  .reviews__list {
+    position: relative;
   }
 
-  &__control--next {
-    right: 0;
-    background-image: url(../img/right-arrow.png);
+  .reviews__item-author {
+    font-size: 24px;
+  }
+
+  .reviews__item-author-info {
+    font-size: 18px;
+  }
+
+  .reviews__item-text {
+    width: 680px;
+  }
+
+  .reviews__inner {
+    justify-content: center;
+    margin-bottom: 0;
+  }
+
+  .reviews__pagination {
+    display: none;
+  }
+
+  .reviews__control {
+    display: block;
   }
 }
