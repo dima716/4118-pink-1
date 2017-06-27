@@ -113,6 +113,7 @@
 
   toggleMenu = document.getElementsByClassName('main-nav__toggler')[0];
   mainNav = document.getElementsByClassName('main-nav')[0];
+  mainNav.classList.remove('main-nav--open');
 
   toggleMenu.addEventListener('click', function () {
     if ( mainNav.classList.contains('main-nav--open') ) {

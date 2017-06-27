@@ -197,4 +197,14 @@
     text-transform: capitalize;
     font-weight: 400;
   }
+
+  .main-nav--open .main-nav__list {
+    top: 0;
+    display: flex;
+  }
+
+  .main-nav--open .main-nav__show {
+    border: none;
+    background-color: transparent;
+  }
 }
