@@ -1,7 +1,7 @@
 .label-text {
-  position: absolute;
-  top: -35px;
-  left: 23px;
+  display: block;
+  margin-left: 23px;
+  margin-bottom: 7px;
   color: #d22856;
   text-transform: uppercase;
   line-height: 30px;
@@ -9,7 +9,7 @@
 
 @mixin tablet {
   .label-text {
-    position: static;
     margin-right: 19px;
+    margin-bottom: 0;
   }
 }

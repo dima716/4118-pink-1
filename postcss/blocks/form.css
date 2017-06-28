@@ -2,7 +2,7 @@
   width: 280px;
   margin: 0 auto;
   padding-top: 44px;
-  padding-bottom: 80px;
+  padding-bottom: 38px;
   text-align: center;
   line-height: 30px;
 
@@ -44,7 +44,11 @@
 }
 
 .form__row--person-contacts {
-  margin-bottom: 50px;
+  margin-bottom: 19px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .form__row--person-travel-app {
@@ -79,8 +83,21 @@
   background-color: #f2f2f2;
 }
 
+.form__row--person-info {
+  margin-bottom: 19px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.form__person-info {
+  padding-bottom: 42px;
+}
+
 .form__person-contacts {
-  padding-top: 66px;
+  padding-top: 34px;
+  padding-bottom: 42px;
 }
 
 .form__person-travel-app {
@@ -245,6 +262,7 @@
   }
 
   .form__person-info {
+    padding-bottom: 0;
     order: -1;
   }
 
@@ -256,6 +274,7 @@
 
   .form__person-contacts {
     padding-top: 0;
+    padding-bottom: 0;
     order: 1;
   }
 
