@@ -15,10 +15,10 @@
   & > p:first-child {
     margin-bottom: 34px;
   }
+}
 
-  & > p > br {
-    display: none;
-  }
+.info__break {
+  display: none;
 }
 
 .info__advantages {
@@ -144,10 +144,10 @@
     & > p:first-child {
       margin-bottom: 0;
     }
+  }
 
-    & > p > br {
-      display: inline;
-    }
+  .info__break {
+    display: inline
   }
 
   .info__advantages {
