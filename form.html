@@ -23,7 +23,7 @@
       <div class="main-nav__container">
         <div class="main-nav__show">
           <a class="page-header__logo" href="index.html">
-            <svg class="page-header__logo-container page-header__logo-container-mobile" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="75" height="22" viewBox="0 0 74.426 22.859" enable-background="new 0 0 74.426 22.859" xml:space="preserve">
+            <svg class="page-header__logo-container page-header__logo-container--mobile" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="75" height="22" viewBox="0 0 74.426 22.859" enable-background="new 0 0 74.426 22.859" xml:space="preserve">
               <g class="page-header__logo-name">
                 <path fill="#FFFFFF" d="M0,1.449c0-0.708,0.58-1.288,1.256-1.288h7.18c5.087,0,8.436,2.704,8.436,7.147v0.064 c0,4.861-4.057,7.373-8.854,7.373H2.544v6.825c0,0.708-0.58,1.288-1.288,1.288C0.58,22.859,0,22.279,0,21.571V1.449z M8.114,12.428 c3.734,0,6.182-1.996,6.182-4.958V7.405c0-3.22-2.415-4.894-6.054-4.894H2.544v9.917H8.114z"/>
                 <path fill="#FFFFFF" d="M21.729,1.288C21.729,0.58,22.308,0,22.983,0c0.709,0,1.288,0.58,1.288,1.288v20.283 c0,0.708-0.579,1.288-1.288,1.288c-0.676,0-1.255-0.58-1.255-1.288V1.288z"/>
@@ -279,13 +279,32 @@
     </div>
     <div class="page-footer__developed-by">
       Разработано
-      <a class="page-footer__developed-by-logo" href="https://htmlacademy.ru/">
+      <a class="page-footer__developed-by-logo" href="https://htmlacademy.ru/intensive/adaptive">
         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="26.943px" height="34.09px" viewBox="0 0 26.943 34.09" enable-background="new 0 0 26.943 34.09" xml:space="preserve">
           <path d="M13.62,0.017L13.472,0L0,1.412v24.661l13.472,8.017l13.43-7.99l0.042-0.026V1.412L13.62,0.017z M25.019,12.127L13.495,5.334 l-0.001-0.104L13.407,5.28l-0.088-0.056v0.109L1.925,12.118V3.147l11.547-1.212l11.547,1.212V12.127z M13.405,6.787L24.923,13.5 l-4.479,2.64l-7.093-4.221l-0.013,1.415l5.904,3.513l-0.86,0.507l-5.031-2.992l-0.013,1.415l3.827,2.275l-0.782,0.523l-3.032-1.787 l-0.013,1.413l1.852,1.091l-1.8,1.081L2.034,13.622L13.405,6.787z M1.925,15.127l11.411,6.791l0.015,1.044l-7.941-4.728L5.395,19.65 l7.979,4.796l0.017,1.076l-7.972-4.741l-0.013,1.415l8.021,4.821l0.045,0.026l8.143-4.872v-1.268l-0.011-0.148v-3.761l3.415-2.036 v10.02L13.472,31.85L1.925,24.979V15.127z"/>
         </svg>
       </a>
     </div>
   </footer>
+  <div class="fail-popup fail-popup--hidden">
+  <div class="fail-popup__message">
+      <b>Что-то пошло<br> не так!</b>
+      <p>Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить.</p>
+    </div>
+    <button class="fail-popup__btn" type="submit">ок</button>
+  </div>
+
+  <div class="success-popup success-popup--hidden">
+    <div class="success-popup__message">
+      <b>Ваша заявка отправлена</b>
+      <p>Спасибо за ваше участие, ваша заявка уже поступила к нам.
+        В ближайшее время мы рассмотрим ее и <br> оповестим вас.
+      </p>
+    </div>
+    <div class="success-popup__btn-wrapper">
+      <button class="success-popup__btn" type="submit">закрыть окно</button>
+    </div>
+  </div>
   <script type="text/javascript" src="js/app.min.js"></script>
 </body>
 </html>

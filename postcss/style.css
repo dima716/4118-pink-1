@@ -41,3 +41,5 @@
 @import 'blocks/input-check.css';
 @import 'blocks/label-radio.css';
 @import 'blocks/input-radio.css';
+@import 'blocks/success-popup.css';
+@import 'blocks/fail-popup.css';
