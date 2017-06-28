@@ -118,13 +118,28 @@
     margin-bottom: 50px;
   }
 
-  .photos__item--day-photo .photos__item-img img {
-    min-height: 510px;
+  .photos__item--day-photo .photos__item-description {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+
+  .photos__item--day-photo .photos__item-author {
+    order: 0;
   }
 
   .photos__item--day-photo .photos__item-likes {
-    position: absolute;
-    right: 28px;
+    margin-left: auto;
+    margin-top: 0;
+    order: 1;
+  }
+
+  .photos__item--day-photo .photos__item-text {
+    order: 2;
+  }
+
+  .photos__item--day-photo .photos__item-img img {
+    min-height: 510px;
   }
 
   .photos__item--day-photo .photos__item-text {
